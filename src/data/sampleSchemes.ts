@@ -107,4 +107,203 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     officialSourceUrl: "https://sspy-up.gov.in/",
     sourceKey: "up_social_welfare",
   },
+
+  /* ---- Additional central schemes (needs_verification; confirm details on
+     each official portal — added from public scheme information, not a single
+     source document). ---- */
+  {
+    id: "b1111111-1111-4111-8111-111111111111",
+    schemeName: "Atal Vayo Abhyuday Yojana (AVYAY) — incl. Elderline 14567",
+    governmentLevel: "central",
+    ministry: "Ministry of Social Justice & Empowerment",
+    department: "Dept. of Social Justice & Empowerment",
+    beneficiaryCategory: "Senior citizens (60+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility:
+      "Senior citizens aged 60 and above. Individual components (senior/continuous care homes, maintenance, assistive devices) have their own criteria — verify on the official portal.",
+    benefits:
+      "Umbrella scheme for the elderly: support to old-age / continuous-care homes (IPSrC), physical aids & assisted-living devices, awareness, and the national Elderline helpline 14567 for information, guidance and grievance redressal.",
+    documentsRequired: ["Age proof", "Aadhaar"],
+    applicationUrl: "https://socialjustice.gov.in/",
+    officialSourceUrl: "https://socialjustice.gov.in/",
+  },
+  {
+    id: "b2222222-2222-4222-8222-222222222222",
+    schemeName: "Rashtriya Vayoshri Yojana (RVY)",
+    governmentLevel: "central",
+    ministry: "Ministry of Social Justice & Empowerment",
+    department: "Dept. of Social Justice & Empowerment",
+    beneficiaryCategory: "Senior citizens (BPL / low income) with age-related disabilities",
+    schemeGroupSlug: "senior_citizens",
+    eligibility:
+      "Senior citizens (60+) from BPL / low-income households with age-related disabilities such as low vision, hearing impairment, loss of teeth or locomotor disability. Verify current criteria on the official portal.",
+    benefits:
+      "Free assisted-living devices distributed through camps — e.g. walking sticks, hearing aids, spectacles, wheelchairs, walkers and dentures.",
+    documentsRequired: ["Age proof", "BPL card / income proof", "Aadhaar"],
+    applicationUrl: "https://socialjustice.gov.in/",
+    officialSourceUrl: "https://socialjustice.gov.in/",
+  },
+  {
+    id: "b3333333-3333-4333-8333-333333333333",
+    schemeName: "National Family Benefit Scheme (NFBS)",
+    governmentLevel: "central",
+    ministry: "Ministry of Rural Development",
+    department: "National Social Assistance Programme (NSAP)",
+    beneficiaryCategory: "BPL families on death of the primary breadwinner",
+    schemeGroupSlug: "low_income",
+    eligibility:
+      "BPL households where the primary breadwinner (aged 18–59) has died. One-time assistance to the surviving household. Verify on the NSAP portal.",
+    benefits:
+      "One-time lump-sum family benefit (₹20,000) to the bereaved BPL household.",
+    documentsRequired: ["Death certificate of the breadwinner", "BPL card", "Bank details"],
+    applicationUrl: "https://nsap.nic.in/",
+    officialSourceUrl: "https://nsap.nic.in/",
+    sourceKey: "nsap",
+  },
+  {
+    id: "b4444444-4444-4444-8444-444444444444",
+    schemeName: "Indira Gandhi National Disability Pension Scheme (IGNDPS)",
+    governmentLevel: "central",
+    ministry: "Ministry of Rural Development",
+    department: "National Social Assistance Programme (NSAP)",
+    beneficiaryCategory: "BPL persons with severe or multiple disabilities",
+    schemeGroupSlug: "disability",
+    eligibility:
+      "BPL persons aged 18–79 with severe or multiple disabilities. Verify the disability threshold and criteria on the NSAP portal.",
+    benefits:
+      "Monthly disability pension (central contribution, plus state top-up where applicable).",
+    documentsRequired: ["Disability certificate / UDID", "Age proof", "BPL card", "Bank details"],
+    applicationUrl: "https://nsap.nic.in/",
+    officialSourceUrl: "https://nsap.nic.in/",
+    sourceKey: "nsap",
+  },
+  {
+    id: "b5555555-5555-4555-8555-555555555555",
+    schemeName: "Annapurna Scheme",
+    governmentLevel: "central",
+    ministry: "Ministry of Rural Development",
+    department: "National Social Assistance Programme (NSAP)",
+    beneficiaryCategory: "Uncovered eligible senior citizens (food security)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility:
+      "Senior citizens (65+) who are eligible for, but not receiving, an old-age pension under NSAP. Verify on the NSAP portal.",
+    benefits: "10 kg of foodgrain per month, free of cost.",
+    documentsRequired: ["Age proof", "BPL card"],
+    applicationUrl: "https://nsap.nic.in/",
+    officialSourceUrl: "https://nsap.nic.in/",
+    sourceKey: "nsap",
+  },
+  {
+    id: "b6666666-6666-4666-8666-666666666666",
+    schemeName: "Assistance to Disabled Persons (ADIP) Scheme",
+    governmentLevel: "central",
+    ministry: "Ministry of Social Justice & Empowerment",
+    department: "Dept. of Empowerment of Persons with Disabilities (DEPwD)",
+    beneficiaryCategory: "Persons with disabilities needing aids & appliances",
+    schemeGroupSlug: "disability",
+    eligibility:
+      "Persons with disabilities holding a disability certificate, within the scheme's income limit. Verify the current income ceiling on the official portal.",
+    benefits:
+      "Free or subsidised assistive aids & appliances — e.g. motorised tricycles, wheelchairs, hearing aids, prostheses, and smart canes.",
+    documentsRequired: ["Disability certificate / UDID", "Income certificate", "Aadhaar"],
+    applicationUrl: "https://disabilityaffairs.gov.in/",
+    officialSourceUrl: "https://disabilityaffairs.gov.in/",
+  },
+  {
+    id: "b7777777-7777-4777-8777-777777777777",
+    schemeName: "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+    governmentLevel: "central",
+    ministry: "Ministry of Women & Child Development",
+    department: "Mission Shakti (Samarthya)",
+    beneficiaryCategory: "Pregnant women & lactating mothers",
+    schemeGroupSlug: "women",
+    eligibility:
+      "Pregnant and lactating mothers for the first living child (and for a second child if the child is a girl, per current norms). Verify eligibility and instalment conditions on the official portal.",
+    benefits:
+      "Conditional maternity cash benefit paid in instalments to partly compensate wage loss and support nutrition and health.",
+    documentsRequired: ["MCP (mother–child protection) card", "Aadhaar", "Bank details"],
+    applicationUrl: "https://wcd.gov.in/",
+    officialSourceUrl: "https://wcd.gov.in/",
+    sourceKey: "vatsalya",
+  },
+  {
+    id: "b8888888-8888-4888-8888-888888888888",
+    schemeName: "One Stop Centre (Sakhi) — incl. Women Helpline 181",
+    governmentLevel: "central",
+    ministry: "Ministry of Women & Child Development",
+    department: "Mission Shakti (Sambal)",
+    beneficiaryCategory: "Women affected by violence",
+    schemeGroupSlug: "women",
+    eligibility:
+      "Any woman (and girls below 18, in coordination with child-protection authorities) affected by physical, sexual, emotional or economic abuse — regardless of income.",
+    benefits:
+      "Integrated support under one roof: emergency shelter, medical aid, police and legal assistance, and psychosocial counselling. Reach the Women Helpline on 181.",
+    documentsRequired: [],
+    applicationUrl: "https://wcd.gov.in/",
+    officialSourceUrl: "https://wcd.gov.in/",
+    sourceKey: "vatsalya",
+  },
+  {
+    id: "b9999999-9999-4999-8999-999999999999",
+    schemeName: "Ayushman Bharat — PM Jan Arogya Yojana (PM-JAY)",
+    governmentLevel: "central",
+    ministry: "Ministry of Health & Family Welfare",
+    department: "National Health Authority",
+    beneficiaryCategory: "Eligible low-income families (health cover)",
+    schemeGroupSlug: "low_income",
+    eligibility:
+      "Families identified under the scheme's deprivation / occupational criteria and other notified categories; senior citizens aged 70+ are also covered under a recent expansion. Check your eligibility on the PM-JAY portal.",
+    benefits:
+      "Cashless health cover up to ₹5 lakh per family per year for secondary and tertiary hospitalisation at empanelled hospitals.",
+    documentsRequired: ["Aadhaar", "Eligibility / ration details as per the portal"],
+    applicationUrl: "https://pmjay.gov.in/",
+    officialSourceUrl: "https://pmjay.gov.in/",
+  },
+  {
+    id: "ba111111-1111-4111-8111-111111111111",
+    schemeName: "National Tele Mental Health Programme (Tele MANAS)",
+    governmentLevel: "central",
+    ministry: "Ministry of Health & Family Welfare",
+    department: "National Tele Mental Health Programme",
+    beneficiaryCategory: "Anyone needing mental-health support",
+    schemeGroupSlug: "mental_health",
+    eligibility: "Open to everyone — the service is free and confidential.",
+    benefits:
+      "24×7 free tele-mental-health counselling and support. Dial 14416 (or 1-800-891-4416) from anywhere in India.",
+    documentsRequired: [],
+    applicationUrl: "https://telemanas.mohfw.gov.in/",
+    officialSourceUrl: "https://telemanas.mohfw.gov.in/",
+  },
+  {
+    id: "ba222222-2222-4222-8222-222222222222",
+    schemeName: "SMILE — Support for Marginalized Individuals for Livelihood & Enterprise",
+    governmentLevel: "central",
+    ministry: "Ministry of Social Justice & Empowerment",
+    department: "Dept. of Social Justice & Empowerment",
+    beneficiaryCategory: "Persons engaged in begging; transgender persons",
+    schemeGroupSlug: "homeless",
+    eligibility:
+      "Persons engaged in the act of begging / in destitution, and transgender persons, for rehabilitation and welfare. Verify on the official portal.",
+    benefits:
+      "Comprehensive rehabilitation — shelter, medical care, counselling, education and skill development / livelihood support; plus scholarships and welfare measures for transgender persons.",
+    documentsRequired: [],
+    applicationUrl: "https://socialjustice.gov.in/",
+    officialSourceUrl: "https://socialjustice.gov.in/",
+  },
+  {
+    id: "ba333333-3333-4333-8333-333333333333",
+    schemeName: "PM CARES for Children",
+    governmentLevel: "central",
+    ministry: "Ministry of Women & Child Development",
+    department: "PM CARES for Children",
+    beneficiaryCategory: "Children who lost parents / guardian to COVID-19",
+    schemeGroupSlug: "children",
+    eligibility:
+      "Children who lost both parents, or the surviving parent / legal guardian, to COVID-19 between 11 March 2020 and 28 February 2022 and were under 18 at the time. Verify on the official portal.",
+    benefits:
+      "Support up to age 23: a monthly stipend from 18–23, a ₹10 lakh corpus at 23, free schooling / education support, and health cover under Ayushman Bharat (₹5 lakh).",
+    documentsRequired: [],
+    applicationUrl: "https://pmcaresforchildren.in/",
+    officialSourceUrl: "https://pmcaresforchildren.in/",
+  },
 ];
