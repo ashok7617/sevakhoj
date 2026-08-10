@@ -24,6 +24,10 @@ government registration is **not** an endorsement of service quality. See
 
 ![SevaKhoj Near Me map](docs/screenshots/near-map.png)
 
+**Admin verification dashboard** — data-quality KPIs and a per-status breakdown; recording a decision writes to an audit trail. A "Government Verified" badge means a record matches an official source — never an endorsement of quality:
+
+![SevaKhoj admin verification dashboard](docs/screenshots/admin-dashboard.png)
+
 ## Tech stack
 
 - **Next.js 16** (App Router) + **TypeScript** + **Tailwind CSS v4**
