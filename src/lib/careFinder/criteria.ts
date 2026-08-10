@@ -105,6 +105,11 @@ export const GAZETTEER: Record<string, Place> = {
   visakhapatnam: { city: "Visakhapatnam", district: "Visakhapatnam", state: "Andhra Pradesh", lat: 17.6868, lng: 83.2185 },
   vizag: { city: "Visakhapatnam", district: "Visakhapatnam", state: "Andhra Pradesh", lat: 17.6868, lng: 83.2185 },
   coimbatore: { city: "Coimbatore", district: "Coimbatore", state: "Tamil Nadu", lat: 11.0168, lng: 76.9558 },
+  srinagar: { city: "Srinagar", district: "Srinagar", state: "Jammu & Kashmir", lat: 34.0837, lng: 74.7973 },
+  rourkela: { city: "Rourkela", district: "Sundargarh", state: "Odisha", lat: 22.2604, lng: 84.8536 },
+  tirupati: { city: "Tirupati", district: "Tirupati", state: "Andhra Pradesh", lat: 13.6288, lng: 79.4192 },
+  bhuj: { city: "Bhuj", district: "Kachchh", state: "Gujarat", lat: 23.2419, lng: 69.6669 },
+  faridabad: { city: "Faridabad", district: "Faridabad", state: "Haryana", lat: 28.4089, lng: 77.3178 },
 };
 
 /** Devanagari + alternate-spelling city names → a GAZETTEER key. */
