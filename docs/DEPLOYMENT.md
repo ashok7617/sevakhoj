@@ -76,11 +76,32 @@ Mixed nameservers cause intermittent resolution. Fix in Mochahost's
 On Vercel, `www.sevakhoj.com` is a **separate domain** from the apex — adding
 `sevakhoj.com` does **not** auto-cover `www`. If `https://www.sevakhoj.com`
 fails with *"no certificate subject name matches www.sevakhoj.com"*:
-1. Vercel → Domains → **Add** `www.sevakhoj.com`.
-2. Set it to **Redirect to `sevakhoj.com`**.
-3. Vercel then issues a Let's Encrypt cert covering `www` (a few minutes).
+1. Vercel → Domains → **Add** `www.sevakhoj.com` (this is what makes Vercel
+   issue a Let's Encrypt cert covering `www` — a few minutes).
 
 > Renewing the *apex* cert does NOT fix `www` — `www` needs its own domain entry.
+
+### `www` → apex redirect (done in code, not the dashboard)
+Once `www` has a cert, it's canonicalized to the apex via a **host-based
+redirect in `next.config.ts`** (not the Vercel dashboard redirect option), so
+the choice is version-controlled:
+
+```ts
+async redirects() {
+  return [
+    {
+      source: "/:path*",
+      has: [{ type: "host", value: "www.sevakhoj.com" }],
+      destination: "https://sevakhoj.com/:path*",
+      permanent: true, // 308
+    },
+  ];
+}
+```
+
+Result: `www.sevakhoj.com/<path>` → **308** → `sevakhoj.com/<path>` (path
+preserved). `sevakhoj.com` is the single canonical host. To flip the canonical
+host to `www` instead, invert the `has` host value and the destination.
 
 ### Diagnostic commands
 ```bash
@@ -207,7 +228,7 @@ npm run test:finder       # 27 Care Finder checks (English + Hindi/Hinglish)
 
 | Symptom | Likely cause | Fix |
 |---------|--------------|-----|
-| `https://www.sevakhoj.com` TLS error | `www` not added as its own Vercel domain | Add `www.sevakhoj.com` in Vercel → redirect to apex (§3) |
+| `https://www.sevakhoj.com` TLS error | `www` not added as its own Vercel domain | Add `www.sevakhoj.com` in Vercel so it gets a cert (§3); the apex redirect is already handled in `next.config.ts` |
 | `/admin` returns **503** | `ADMIN_PASSWORD` not set in prod | Set it in Vercel → redeploy (§4) |
 | A public page unexpectedly asks to log in | A link points into `/admin/*` | Repoint it to a public route (this is how `/data-sources` was fixed) |
 | Site shows "Database not connected" | `DATABASE_URL` wrong/unset, or Neon asleep | Check the Vercel env var; confirm the **pooled** string + `sslmode=require` |

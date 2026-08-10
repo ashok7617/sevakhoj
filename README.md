@@ -1,6 +1,9 @@
 # SevaKhoj · सेवा खोज
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Live](https://img.shields.io/badge/Live-sevakhoj.com-brightgreen.svg)](https://sevakhoj.com)
+
+**Live at [sevakhoj.com](https://sevakhoj.com).** Running it or deploying your own? See the [Deployment & Operations runbook](docs/DEPLOYMENT.md).
 
 _Domain: **SevaKhoj.com**. "Seva" (service/care) + "Khoj" (search) — a care search. (Formerly the working name "India Care & Support Platform".)_
 
@@ -104,6 +107,14 @@ show a "connect your database" notice instead of data.
 | `npm run db:setup`  | migrate + seed                                     |
 | `npm run db:studio` | Browse data in Drizzle Studio                      |
 | `npm run lint`      | ESLint                                             |
+
+## Deployment
+
+Hosted on **Vercel** (auto-deploys on push to `main`) with a **Neon** serverless
+Postgres + PostGIS database. `/admin` is password-protected (HTTP Basic Auth via
+`src/proxy.ts`, gated by the `ADMIN_PASSWORD` env var). Full details —
+domain/DNS, environment variables, the admin lock, and troubleshooting — are in
+the **[Deployment & Operations runbook](docs/DEPLOYMENT.md)**.
 
 ## Data model & core principles
 
