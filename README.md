@@ -1,5 +1,7 @@
 # SevaKhoj · सेवा खोज
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 _Domain: **SevaKhoj.com**. "Seva" (service/care) + "Khoj" (search) — a care search. (Formerly the working name "India Care & Support Platform".)_
 
 A trusted, India-wide platform to discover **care & support facilities** and
