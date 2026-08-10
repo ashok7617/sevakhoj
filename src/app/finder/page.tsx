@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { GROUPS } from "@/lib/groups";
 import { VerificationBadge } from "@/components/VerificationBadge";
@@ -82,6 +82,15 @@ export default function CareFinderPage() {
       setLoading(false);
     }
   }
+
+  // Deep-link support: /finder?q=... prefills and runs the search on load.
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (!q) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setQuery(q);
+    submit(q);
+  }, []);
 
   const c = result?.criteria;
   const chips: string[] = [];

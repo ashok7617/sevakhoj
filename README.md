@@ -14,6 +14,16 @@ government registration is **not** an endorsement of service quality. See
 
 ![SevaKhoj — find care facilities and government schemes across India](docs/screenshots/home.png)
 
+## Screenshots
+
+**AI Care Finder** — a plain-language request (English, हिंदी, or Hinglish) is parsed into structured filters and answered from the database, with source attribution and preliminary-eligibility notes (try it live: `/finder?q=…`):
+
+![SevaKhoj AI Care Finder](docs/screenshots/care-finder.png)
+
+**Near Me** — PostGIS radius search rendered on a Leaflet / OpenStreetMap map:
+
+![SevaKhoj Near Me map](docs/screenshots/near-map.png)
+
 ## Tech stack
 
 - **Next.js 16** (App Router) + **TypeScript** + **Tailwind CSS v4**
