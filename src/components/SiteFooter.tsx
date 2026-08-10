@@ -36,12 +36,20 @@ export function SiteFooter() {
             © {new Date().getFullYear()} SevaKhoj · सेवा खोज. Sources are
             attributed on each record with a last-verified date.
           </p>
-          <Link
+          {/*
+            Plain <a>, NOT next/link: the App Router prefetches <Link> routes as
+            they enter the viewport. Prefetching the password-protected /admin
+            returns 401 with a Basic-Auth challenge, which pops the browser login
+            dialog on ordinary pages. A plain anchor is never prefetched; a click
+            still navigates to /admin and prompts for credentials as intended.
+          */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a
             href="/admin"
             className="rounded-md border border-slate-200 px-3 py-1 text-xs text-slate-400 hover:border-emerald-300 hover:text-emerald-700"
           >
             Admin
-          </Link>
+          </a>
         </div>
       </div>
     </footer>
