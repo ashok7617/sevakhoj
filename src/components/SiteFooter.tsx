@@ -43,7 +43,6 @@ export function SiteFooter() {
             dialog on ordinary pages. A plain anchor is never prefetched; a click
             still navigates to /admin and prompts for credentials as intended.
           */}
-          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a
             href="/admin"
             className="rounded-md border border-slate-200 px-3 py-1 text-xs text-slate-400 hover:border-emerald-300 hover:text-emerald-700"
