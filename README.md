@@ -12,6 +12,8 @@ This is a **discovery** platform. It is **not** a government service, and
 government registration is **not** an endorsement of service quality. See
 [`memory.md`](memory.md) for the full product brief, roadmap, and principles.
 
+![SevaKhoj — find care facilities and government schemes across India](docs/screenshots/home.png)
+
 ## Tech stack
 
 - **Next.js 16** (App Router) + **TypeScript** + **Tailwind CSS v4**
