@@ -17,7 +17,7 @@ export default async function CareCentersPage({
   const group = sp.group?.trim() || undefined;
   const state = sp.state?.trim() || undefined;
 
-  const { rows: facilities, dbAvailable } = await listFacilities({ q, group, state });
+  const { rows: facilities, dbAvailable } = await listFacilities({ q, group, state, limit: 200 });
   const activeGroup = group ? groupBySlug(group) : undefined;
 
   return (
