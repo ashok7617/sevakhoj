@@ -110,6 +110,14 @@ export const GAZETTEER: Record<string, Place> = {
   tirupati: { city: "Tirupati", district: "Tirupati", state: "Andhra Pradesh", lat: 13.6288, lng: 79.4192 },
   bhuj: { city: "Bhuj", district: "Kachchh", state: "Gujarat", lat: 23.2419, lng: 69.6669 },
   faridabad: { city: "Faridabad", district: "Faridabad", state: "Haryana", lat: 28.4089, lng: 77.3178 },
+  puducherry: { city: "Puducherry", district: "Puducherry", state: "Puducherry", lat: 11.9416, lng: 79.8083 },
+  pondicherry: { city: "Puducherry", district: "Puducherry", state: "Puducherry", lat: 11.9416, lng: 79.8083 },
+  nagapattinam: { city: "Nagapattinam", district: "Nagapattinam", state: "Tamil Nadu", lat: 10.7672, lng: 79.8449 },
+  begusarai: { city: "Begusarai", district: "Begusarai", state: "Bihar", lat: 25.4182, lng: 86.1272 },
+  jammu: { city: "Jammu", district: "Jammu", state: "Jammu & Kashmir", lat: 32.7266, lng: 74.857 },
+  chandigarh: { city: "Chandigarh", district: "Chandigarh", state: "Chandigarh", lat: 30.7333, lng: 76.7794 },
+  itanagar: { city: "Itanagar", district: "Papum Pare", state: "Arunachal Pradesh", lat: 27.0844, lng: 93.6053 },
+  amritsar: { city: "Amritsar", district: "Amritsar", state: "Punjab", lat: 31.634, lng: 74.8723 },
 };
 
 /** Devanagari + alternate-spelling city names → a GAZETTEER key. */
