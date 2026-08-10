@@ -1,5 +1,14 @@
 import Link from "next/link";
 
+const FOOTER_LINKS = [
+  { href: "/about", label: "About" },
+  { href: "/data-sources", label: "Data Sources" },
+  { href: "/register", label: "Add a Center" },
+  { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Service" },
+];
+
 export function SiteFooter() {
   return (
     <footer className="mt-16 border-t border-slate-200 bg-white">
@@ -11,13 +20,20 @@ export function SiteFooter() {
           quality. Always confirm details with the official source before acting,
           and apply through official government portals where available.
         </p>
+        <nav className="flex flex-wrap gap-x-4 gap-y-2 pt-1">
+          {FOOTER_LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="text-slate-600 hover:text-emerald-700 hover:underline"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </nav>
         <p>
           © {new Date().getFullYear()} SevaKhoj · सेवा खोज. Sources are attributed
-          on each record with a last-verified date. See our{" "}
-          <Link href="/data-sources" className="text-emerald-700 hover:underline">
-            government data sources
-          </Link>
-          .
+          on each record with a last-verified date.
         </p>
       </div>
     </footer>
