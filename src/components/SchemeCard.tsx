@@ -31,14 +31,37 @@ export function SchemeCard({ s }: { s: Scheme }) {
           {s.beneficiaryCategory}
         </p>
       ) : null}
+      {s.eligibility ? (
+        <p className="mt-1 text-sm text-slate-600">
+          <span className="font-medium text-slate-700">Eligibility:</span>{" "}
+          {s.eligibility}
+        </p>
+      ) : null}
       {s.benefits ? (
         <p className="mt-1 text-sm text-slate-600">
           <span className="font-medium text-slate-700">Benefits:</span>{" "}
           {s.benefits}
         </p>
       ) : null}
+      {s.applicationProcess ? (
+        <p className="mt-1 text-sm text-slate-600">
+          <span className="font-medium text-slate-700">How to apply:</span>{" "}
+          {s.applicationProcess}
+        </p>
+      ) : null}
+      {s.documentsRequired && s.documentsRequired.length > 0 ? (
+        <p className="mt-1 text-sm text-slate-600">
+          <span className="font-medium text-slate-700">Documents:</span>{" "}
+          {s.documentsRequired.join(" · ")}
+        </p>
+      ) : null}
 
-      <div className="mt-3 flex items-center gap-3 text-sm">
+      <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
+        {s.sourceLastUpdated ? (
+          <span className="text-xs text-slate-400">
+            Source dated {new Date(s.sourceLastUpdated).toISOString().slice(0, 10)}
+          </span>
+        ) : null}
         {s.applicationUrl ? (
           <a
             href={s.applicationUrl}

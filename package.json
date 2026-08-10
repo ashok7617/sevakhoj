@@ -15,7 +15,8 @@
     "db:studio": "drizzle-kit studio",
     "matrix:csv": "tsx scripts/export-matrix-csv.ts",
     "test:finder": "tsx scripts/test-care-finder.ts",
-    "db:seed-starter": "tsx scripts/seed-starter-facilities.ts"
+    "db:seed-starter": "tsx scripts/seed-starter-facilities.ts",
+    "db:seed-schemes": "tsx scripts/seed-schemes.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.116.0",
