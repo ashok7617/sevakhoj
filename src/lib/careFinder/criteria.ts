@@ -98,6 +98,13 @@ export const GAZETTEER: Record<string, Place> = {
   gurdaspur: { city: "Gurdaspur", district: "Gurdaspur", state: "Punjab", lat: 32.0417, lng: 75.4053 },
   porvorim: { city: "Porvorim", district: "North Goa", state: "Goa", lat: 15.538, lng: 73.8113 },
   panaji: { city: "Panaji", district: "North Goa", state: "Goa", lat: 15.4909, lng: 73.8278 },
+  shillong: { city: "Shillong", district: "East Khasi Hills", state: "Meghalaya", lat: 25.5788, lng: 91.8933 },
+  bhubaneswar: { city: "Bhubaneswar", district: "Khordha", state: "Odisha", lat: 20.2961, lng: 85.8245 },
+  ranchi: { city: "Ranchi", district: "Ranchi", state: "Jharkhand", lat: 23.3441, lng: 85.3096 },
+  raipur: { city: "Raipur", district: "Raipur", state: "Chhattisgarh", lat: 21.2514, lng: 81.6296 },
+  visakhapatnam: { city: "Visakhapatnam", district: "Visakhapatnam", state: "Andhra Pradesh", lat: 17.6868, lng: 83.2185 },
+  vizag: { city: "Visakhapatnam", district: "Visakhapatnam", state: "Andhra Pradesh", lat: 17.6868, lng: 83.2185 },
+  coimbatore: { city: "Coimbatore", district: "Coimbatore", state: "Tamil Nadu", lat: 11.0168, lng: 76.9558 },
 };
 
 /** Devanagari + alternate-spelling city names → a GAZETTEER key. */
