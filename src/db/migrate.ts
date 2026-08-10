@@ -16,7 +16,7 @@ if (!DATABASE_URL) throw new Error("DATABASE_URL is not set (see .env.example)."
 const migrationsDir = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "migrations");
 
 async function main() {
-  const sql = postgres(DATABASE_URL!, { max: 1 });
+  const sql = postgres(DATABASE_URL!, { max: 1, prepare: false });
   try {
     await sql`CREATE TABLE IF NOT EXISTS _migrations (
       name text PRIMARY KEY,

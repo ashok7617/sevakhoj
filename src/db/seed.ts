@@ -129,7 +129,7 @@ const SOURCES = [
 ];
 
 async function main() {
-  const client = postgres(DATABASE_URL!, { max: 1 });
+  const client = postgres(DATABASE_URL!, { max: 1, prepare: false });
   const db = drizzle(client, { schema });
 
   try {

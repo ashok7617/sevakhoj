@@ -16,7 +16,15 @@ const globalForDb = globalThis as unknown as {
   __careSql?: ReturnType<typeof postgres>;
 };
 
-const client = globalForDb.__careSql ?? postgres(connectionString, { max: 10 });
+const client =
+  globalForDb.__careSql ??
+  postgres(connectionString, {
+    // Serverless (Vercel) spins up many short-lived instances, so keep the pool
+    // small in production. `prepare: false` is required by transaction poolers
+    // (Neon / Supabase pgbouncer) and is harmless on a direct connection.
+    max: process.env.NODE_ENV === "production" ? 3 : 10,
+    prepare: false,
+  });
 if (process.env.NODE_ENV !== "production") globalForDb.__careSql = client;
 
 export const db = drizzle(client, { schema });

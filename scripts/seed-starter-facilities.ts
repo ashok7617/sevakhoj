@@ -218,7 +218,7 @@ async function geocode(r: Rec): Promise<{ lat: number; lng: number } | null> {
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function main() {
-  const client = postgres(DATABASE_URL!, { max: 1 });
+  const client = postgres(DATABASE_URL!, { max: 1, prepare: false });
   const db = drizzle(client, { schema });
   try {
     const cats = await db

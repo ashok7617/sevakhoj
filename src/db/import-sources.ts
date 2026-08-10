@@ -17,7 +17,7 @@ const DATABASE_URL = process.env.DATABASE_URL;
 if (!DATABASE_URL) throw new Error("DATABASE_URL is not set (see .env.example).");
 
 async function main() {
-  const client = postgres(DATABASE_URL!, { max: 1 });
+  const client = postgres(DATABASE_URL!, { max: 1, prepare: false });
   const db = drizzle(client, { schema });
 
   const values = MATRIX.map((r) => ({
