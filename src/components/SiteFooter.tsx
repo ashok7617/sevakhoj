@@ -31,10 +31,18 @@ export function SiteFooter() {
             </Link>
           ))}
         </nav>
-        <p>
-          © {new Date().getFullYear()} SevaKhoj · सेवा खोज. Sources are attributed
-          on each record with a last-verified date.
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-3">
+          <p>
+            © {new Date().getFullYear()} SevaKhoj · सेवा खोज. Sources are
+            attributed on each record with a last-verified date.
+          </p>
+          <Link
+            href="/admin"
+            className="rounded-md border border-slate-200 px-3 py-1 text-xs text-slate-400 hover:border-emerald-300 hover:text-emerald-700"
+          >
+            Admin
+          </Link>
+        </div>
       </div>
     </footer>
   );

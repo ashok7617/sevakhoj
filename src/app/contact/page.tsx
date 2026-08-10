@@ -5,9 +5,7 @@ export const metadata = {
   description: "Get in touch with SevaKhoj — corrections, questions, or to list a care center.",
 };
 
-// NOTE: update CONTACT_EMAIL to a mailbox you actually monitor on the
-// sevakhoj.com domain (or a forwarding address) before relying on it.
-const CONTACT_EMAIL = "contact@sevakhoj.com";
+const CONTACT_EMAIL = "ashok.n.kumar2@gmail.com";
 
 export default function ContactPage() {
   return (
