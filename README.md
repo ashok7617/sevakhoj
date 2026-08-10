@@ -1,6 +1,6 @@
-# India Care & Support Platform
+# SevaKhoj · सेवा खोज
 
-_Working name; final brand/domain (e.g. **India CareSetu**) TBD._
+_Domain: **SevaKhoj.com**. "Seva" (service/care) + "Khoj" (search) — a care search. (Formerly the working name "India Care & Support Platform".)_
 
 A trusted, India-wide platform to discover **care & support facilities** and
 **government schemes** — for senior citizens, widows, children, and more —

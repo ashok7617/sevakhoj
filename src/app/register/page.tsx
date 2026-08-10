@@ -2,7 +2,7 @@ import { listCareCategories } from "@/lib/queries";
 import { RegisterForm } from "@/components/RegisterForm";
 import { DbNotice } from "@/components/DbNotice";
 
-export const metadata = { title: "Add your center · India Care & Support" };
+export const metadata = { title: "Add your center · SevaKhoj" };
 export const dynamic = "force-dynamic";
 
 export default async function RegisterPage() {

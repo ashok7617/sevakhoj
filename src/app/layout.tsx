@@ -4,9 +4,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "India Care & Support Platform",
+  title: "SevaKhoj — Find trusted care & government support in India",
   description:
-    "Find trusted care facilities, government schemes, and support services across India. Not a government service.",
+    "SevaKhoj (सेवा खोज): find care facilities, government schemes, and support services across India. Not a government service.",
 };
 
 export default function RootLayout({

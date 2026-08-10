@@ -15,14 +15,14 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2">
           <span className="grid h-9 w-9 place-items-center rounded-lg bg-emerald-600 text-lg font-bold text-white">
-            C
+            स
           </span>
           <span className="leading-tight">
             <span className="block text-sm font-semibold text-slate-900">
-              India Care &amp; Support
+              SevaKhoj <span className="font-normal text-slate-400">· सेवा खोज</span>
             </span>
             <span className="block text-[11px] text-slate-500">
-              Facilities · Schemes · Help
+              Find care &amp; government schemes
             </span>
           </span>
         </Link>

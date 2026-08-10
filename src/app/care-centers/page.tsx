@@ -4,7 +4,7 @@ import { FacilityCard } from "@/components/FacilityCard";
 import { DbNotice } from "@/components/DbNotice";
 import { GROUPS, groupBySlug } from "@/lib/groups";
 
-export const metadata = { title: "Care Centers · India Care & Support" };
+export const metadata = { title: "Care Centers · SevaKhoj" };
 export const dynamic = "force-dynamic";
 
 export default async function CareCentersPage({

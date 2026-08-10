@@ -10,8 +10,8 @@ export function SiteFooter() {
           and apply through official government portals where available.
         </p>
         <p>
-          © {new Date().getFullYear()} India Care &amp; Support Platform (working
-          name). Sources are attributed on each record with a last-verified date.
+          © {new Date().getFullYear()} SevaKhoj · सेवा खोज. Sources are attributed
+          on each record with a last-verified date.
         </p>
       </div>
     </footer>

@@ -4,7 +4,7 @@ import { SchemeCard } from "@/components/SchemeCard";
 import { DbNotice } from "@/components/DbNotice";
 import { GROUPS } from "@/lib/groups";
 
-export const metadata = { title: "Government Schemes · India Care & Support" };
+export const metadata = { title: "Government Schemes · SevaKhoj" };
 export const dynamic = "force-dynamic";
 
 const LEVELS = [

@@ -37,7 +37,7 @@ export default async function HomePage() {
       <section className="border-b border-slate-200 bg-gradient-to-b from-emerald-50 to-background">
         <div className="mx-auto max-w-6xl px-4 py-14">
           <p className="text-sm font-medium text-emerald-700">
-            A trusted bridge to India&apos;s care &amp; welfare ecosystem
+            Find trusted care and government support across India
           </p>
           <h1 className="mt-2 max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Find care facilities, government schemes, and support services across

@@ -8,7 +8,7 @@ import {
   type MatrixRow,
 } from "@/data/governmentSourceMatrix";
 
-export const metadata = { title: "Govt Data Source Matrix · India Care & Support" };
+export const metadata = { title: "Govt Data Source Matrix · SevaKhoj" };
 export const dynamic = "force-dynamic";
 
 type SourceView = {

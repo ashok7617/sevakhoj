@@ -1,5 +1,5 @@
 /**
- * India Care & Support Platform — database schema (Drizzle ORM).
+ * SevaKhoj — database schema (Drizzle ORM).
  *
  * Mirrors the data architecture in memory.md. The authoritative DDL lives in
  * migrations/*.sql (it also enables PostGIS and adds GIST / full-text indexes

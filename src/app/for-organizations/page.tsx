@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const metadata = { title: "For Organizations · India Care & Support" };
+export const metadata = { title: "For Organizations · SevaKhoj" };
 
 const RUN_ORG = [
   "Grants and government schemes for your organization",
