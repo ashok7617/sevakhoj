@@ -1,0 +1,25 @@
+# Local PostgreSQL 16 + PostGIS 3.4 for development.
+# Usage: docker compose up -d
+# (If you don't use Docker, install Postgres.app + PostGIS on macOS and
+#  create a database named india_care_setu, then run: npm run db:migrate)
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: india_care_setu_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: care
+      POSTGRES_PASSWORD: care
+      POSTGRES_DB: india_care_setu
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U care -d india_care_setu"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pgdata:

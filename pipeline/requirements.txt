@@ -1,0 +1,8 @@
+# Ingestion pipeline dependencies.
+#
+# Fetching (urllib) and all transform/normalization logic use ONLY the Python
+# standard library, so `--dry-run` and the tests need nothing installed.
+#
+# The database loader uses psycopg 3; the [binary] extra bundles libpq so you
+# don't need a local Postgres client/libpq to install it.
+psycopg[binary]>=3.1

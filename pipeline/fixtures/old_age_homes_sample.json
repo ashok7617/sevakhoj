@@ -1,0 +1,55 @@
+{
+  "index_name": "old_age_homes_demo",
+  "title": "Old Age Homes (sample fixture — not real government data)",
+  "total": 5,
+  "records": [
+    {
+      "sr_no": "1",
+      "name_of_old_age_home": "  Shanti   Vridha Ashram ",
+      "state": "UTTAR PRADESH",
+      "district": "Lucknow",
+      "address": "12 Civil Lines, Lucknow - 226001",
+      "pincode": "226001",
+      "contact_no": "0522-1234567",
+      "capacity": "50",
+      "latitude": "26.8467",
+      "longitude": "80.9462"
+    },
+    {
+      "sr_no": "2",
+      "name_of_old_age_home": "Anand Old Age Home",
+      "state": "Orissa",
+      "district": "Cuttack",
+      "address": "Near Bus Stand, Cuttack",
+      "pin_code": "753001",
+      "phone": "N/A",
+      "capacity": "sanctioned 30 beds"
+    },
+    {
+      "sr_no": "3",
+      "name_of_the_old_age_home": "Golden Years Residency",
+      "state_name": "Pondicherry",
+      "district": "Puducherry",
+      "address": "5 Beach Road",
+      "postal_code": "605001",
+      "latitude": "11.9139",
+      "longitude": "79.8145"
+    },
+    {
+      "sr_no": "4",
+      "name_of_old_age_home": "Test Home With Bad Coords",
+      "state": "Bihar",
+      "district": "Patna",
+      "pincode": "800001",
+      "latitude": "0",
+      "longitude": "0"
+    },
+    {
+      "sr_no": "5",
+      "name_of_old_age_home": "",
+      "state": "Unknownland",
+      "district": "Nowhere",
+      "address": "no pincode here"
+    }
+  ]
+}
