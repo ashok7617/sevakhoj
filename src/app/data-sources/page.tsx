@@ -8,7 +8,11 @@ import {
   type MatrixRow,
 } from "@/data/governmentSourceMatrix";
 
-export const metadata = { title: "Govt Data Source Matrix · SevaKhoj" };
+export const metadata = {
+  title: "Government Data Sources · SevaKhoj",
+  description:
+    "The official Central, State & UT data sources SevaKhoj draws from — what each publishes, in what formats, and under what reuse terms.",
+};
 export const dynamic = "force-dynamic";
 
 type SourceView = {
@@ -102,7 +106,7 @@ function filterStatic(opts: {
     .map(fromStatic);
 }
 
-export default async function SourcesMatrixPage({
+export default async function DataSourcesPage({
   searchParams,
 }: {
   searchParams: Promise<{
@@ -159,16 +163,17 @@ export default async function SourcesMatrixPage({
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold text-slate-900">
-            Government Data Source Master Matrix
+            Government Data Sources
           </h1>
           <p className="mt-1 max-w-3xl text-sm text-slate-600">
-            The Phase-0 research deliverable: an inventory of Central, State &amp;
-            UT sources — what data each exposes, in what formats, under what
-            reuse terms, and how far each row has been researched.
+            For transparency, here are the official Central, State &amp; UT
+            sources SevaKhoj draws from — what data each publishes, in what
+            formats, and under what reuse terms. Every row links to its official
+            source so you can verify anything yourself.
           </p>
         </div>
         <div className="text-right text-xs text-slate-500">
-          {usingDb ? "Live from database" : "In-repo matrix (database not connected)"}
+          {usingDb ? "Live from database" : "In-repo catalog (database not connected)"}
         </div>
       </div>
 
@@ -183,7 +188,7 @@ export default async function SourcesMatrixPage({
       </div>
 
       {/* Filters */}
-      <form action="/admin/sources" method="get" className="mt-6 flex flex-wrap gap-2">
+      <form action="/data-sources" method="get" className="mt-6 flex flex-wrap gap-2">
         <input
           type="search"
           name="q"
@@ -217,7 +222,7 @@ export default async function SourcesMatrixPage({
         </button>
         {(opts.q || opts.level || opts.state || opts.status || opts.category) && (
           <Link
-            href="/admin/sources"
+            href="/data-sources"
             className="rounded-lg border border-slate-300 px-4 py-2 text-sm text-slate-600 hover:bg-slate-100"
           >
             Clear
@@ -310,12 +315,13 @@ export default async function SourcesMatrixPage({
       </div>
 
       <p className="mt-4 text-xs text-slate-500">
-        Source of truth:{" "}
-        <code className="rounded bg-slate-100 px-1">
-          src/data/governmentSourceMatrix.ts
-        </code>
-        . Load into the DB with <code className="rounded bg-slate-100 px-1">npm run db:import-sources</code>,
-        export a spreadsheet with <code className="rounded bg-slate-100 px-1">npm run matrix:csv</code>.
+        This catalog is compiled from official government portals; each row links
+        to its source, with a last-checked date where available. Found something
+        out of date?{" "}
+        <Link href="/register" className="text-emerald-700 hover:underline">
+          Let us know or add a center
+        </Link>
+        .
       </p>
     </div>
   );

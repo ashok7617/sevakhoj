@@ -3,7 +3,7 @@ import Link from "next/link";
 const SUBNAV = [
   { href: "/admin", label: "Overview" },
   { href: "/admin/verify", label: "Verification Queue" },
-  { href: "/admin/sources", label: "Data Sources" },
+  { href: "/data-sources", label: "Data Sources" },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
