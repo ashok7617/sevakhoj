@@ -133,15 +133,16 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     governmentLevel: "central",
     ministry: "Ministry of Social Justice & Empowerment",
     department: "Dept. of Social Justice & Empowerment",
-    beneficiaryCategory: "Senior citizens (BPL / low income) with age-related disabilities",
+    beneficiaryCategory: "Senior citizens (60+) — BPL or low income",
     schemeGroupSlug: "senior_citizens",
     eligibility:
-      "Senior citizens (60+) from BPL / low-income households with age-related disabilities such as low vision, hearing impairment, loss of teeth or locomotor disability. Verify current criteria on the official portal.",
+      "Senior citizens aged 60 and above belonging to the BPL category, or with a monthly income not exceeding ₹15,000, who have an age-related loss of ability (low vision, hearing impairment, loss of teeth or locomotor difficulty). Beneficiaries are identified at ALIMCO assessment camps.",
     benefits:
-      "Free assisted-living devices distributed through camps — e.g. walking sticks, hearing aids, spectacles, wheelchairs, walkers and dentures.",
-    documentsRequired: ["Age proof", "BPL card / income proof", "Aadhaar"],
+      "Free assisted-living devices distributed through camps — walking sticks, elbow crutches, walkers, tripods/quadpods, hearing aids, wheelchairs, artificial dentures and spectacles.",
+    documentsRequired: ["Age proof", "BPL card / income proof (≤ ₹15,000/month)", "Aadhaar"],
     applicationUrl: "https://socialjustice.gov.in/",
-    officialSourceUrl: "https://socialjustice.gov.in/",
+    officialSourceUrl: "https://socialjustice.gov.in/schemes/43",
+    verificationStatus: "government_verified",
   },
   {
     id: "b3333333-3333-4333-8333-333333333333",
@@ -152,13 +153,14 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "BPL families on death of the primary breadwinner",
     schemeGroupSlug: "low_income",
     eligibility:
-      "BPL households where the primary breadwinner (aged 18–59) has died. One-time assistance to the surviving household. Verify on the NSAP portal.",
+      "BPL households where the primary breadwinner — the member whose earnings substantially supported the household — died while aged 18 to 64 (over 18 and under 65). One-time assistance to the surviving household.",
     benefits:
-      "One-time lump-sum family benefit (₹20,000) to the bereaved BPL household.",
+      "One-time lump-sum family benefit of ₹20,000 to the bereaved BPL household, paid by DBT to a bank / post-office account.",
     documentsRequired: ["Death certificate of the breadwinner", "BPL card", "Bank details"],
     applicationUrl: "https://nsap.nic.in/",
-    officialSourceUrl: "https://nsap.nic.in/",
+    officialSourceUrl: "https://nsap.nic.in/Guidelines/nfbs.pdf",
     sourceKey: "nsap",
+    verificationStatus: "government_verified",
   },
   {
     id: "b4444444-4444-4444-8444-444444444444",
