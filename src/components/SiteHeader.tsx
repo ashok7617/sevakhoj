@@ -6,7 +6,9 @@ const NAV = [
   { href: "/care-centers", label: "Care Centers" },
   { href: "/schemes", label: "Government Schemes" },
   { href: "/register", label: "Add a Center" },
-  { href: "/admin", label: "Admin" },
+  // Note: no public "Admin" link — the admin dashboard lives at /admin and is
+  // password-protected (see src/proxy.ts). Admins reach it by URL directly so
+  // ordinary visitors are never shown a login prompt.
 ];
 
 export function SiteHeader() {
