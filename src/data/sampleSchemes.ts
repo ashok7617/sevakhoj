@@ -42,12 +42,14 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     department: "National Social Assistance Programme (NSAP)",
     beneficiaryCategory: "Senior Citizens (BPL)",
     schemeGroupSlug: "senior_citizens",
-    eligibility: "BPL senior citizens (verify age slabs and criteria on the official portal).",
-    benefits: "Monthly old-age pension (amount varies by age slab and state top-up).",
+    eligibility: "BPL persons aged 60 and above.",
+    benefits:
+      "Monthly old-age pension as central assistance: ₹200 for ages 60–79 and ₹500 from age 80, plus state top-up where applicable.",
     documentsRequired: ["Age proof", "BPL/ration card", "Bank account details"],
     applicationUrl: "https://nsap.nic.in/",
-    officialSourceUrl: "https://nsap.nic.in/",
+    officialSourceUrl: "https://nsap.nic.in/Guidelines/aps.pdf",
     sourceKey: "nsap",
+    verificationStatus: "government_verified",
   },
   {
     id: "a2222222-2222-4222-8222-222222222222",
@@ -57,12 +59,14 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     department: "National Social Assistance Programme (NSAP)",
     beneficiaryCategory: "Widows (BPL)",
     schemeGroupSlug: "widows",
-    eligibility: "BPL widows within the notified age range (verify on official portal).",
-    benefits: "Monthly widow pension (amount varies by state top-up).",
+    eligibility: "BPL widows aged 40 and above.",
+    benefits:
+      "Monthly widow pension as central assistance: ₹300 from age 40, rising to ₹500 from age 80, plus state top-up where applicable.",
     documentsRequired: ["Age proof", "Death certificate of spouse", "BPL card", "Bank details"],
     applicationUrl: "https://nsap.nic.in/",
-    officialSourceUrl: "https://nsap.nic.in/",
+    officialSourceUrl: "https://nsap.nic.in/Guidelines/english_wps.pdf",
     sourceKey: "nsap",
+    verificationStatus: "government_verified",
   },
   {
     id: "a3333333-3333-4333-8333-333333333333",
@@ -171,13 +175,14 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "BPL persons with severe or multiple disabilities",
     schemeGroupSlug: "disability",
     eligibility:
-      "BPL persons aged 18–79 with severe or multiple disabilities. Verify the disability threshold and criteria on the NSAP portal.",
+      "BPL persons aged 18–79 with severe or multiple disabilities.",
     benefits:
-      "Monthly disability pension (central contribution, plus state top-up where applicable).",
+      "Monthly disability pension of ₹300 (ages 18–79) as central assistance, rising to ₹500 from age 80, plus state top-up where applicable.",
     documentsRequired: ["Disability certificate / UDID", "Age proof", "BPL card", "Bank details"],
     applicationUrl: "https://nsap.nic.in/",
-    officialSourceUrl: "https://nsap.nic.in/",
+    officialSourceUrl: "https://nsap.nic.in/Guidelines/dps.pdf",
     sourceKey: "nsap",
+    verificationStatus: "government_verified",
   },
   {
     id: "b5555555-5555-4555-8555-555555555555",
@@ -188,12 +193,13 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Uncovered eligible senior citizens (food security)",
     schemeGroupSlug: "senior_citizens",
     eligibility:
-      "Senior citizens (65+) who are eligible for, but not receiving, an old-age pension under NSAP. Verify on the NSAP portal.",
+      "Indigent senior citizens aged 65 and above who are eligible for, but not receiving, an old-age pension under IGNOAPS/NSAP.",
     benefits: "10 kg of foodgrain per month, free of cost.",
     documentsRequired: ["Age proof", "BPL card"],
     applicationUrl: "https://nsap.nic.in/",
-    officialSourceUrl: "https://nsap.nic.in/",
+    officialSourceUrl: "https://nsap.nic.in/Guidelines/Annapurna%20scheme%20guidelines%202000.pdf",
     sourceKey: "nsap",
+    verificationStatus: "government_verified",
   },
   {
     id: "b6666666-6666-4666-8666-666666666666",
@@ -254,12 +260,13 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Eligible low-income families (health cover)",
     schemeGroupSlug: "low_income",
     eligibility:
-      "Families identified under the scheme's deprivation / occupational criteria and other notified categories; senior citizens aged 70+ are also covered under a recent expansion. Check your eligibility on the PM-JAY portal.",
+      "Families identified under the scheme's deprivation / occupational criteria and other notified categories. In addition, all senior citizens aged 70 and above are covered irrespective of income via the Ayushman Vay Vandana Card. Check your eligibility on the PM-JAY portal.",
     benefits:
-      "Cashless health cover up to ₹5 lakh per family per year for secondary and tertiary hospitalisation at empanelled hospitals.",
+      "Cashless health cover up to ₹5 lakh per family per year for secondary and tertiary hospitalisation at empanelled hospitals — around 2,000 procedures, with pre-existing conditions covered from day one.",
     documentsRequired: ["Aadhaar", "Eligibility / ration details as per the portal"],
     applicationUrl: "https://pmjay.gov.in/",
     officialSourceUrl: "https://pmjay.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "ba111111-1111-4111-8111-111111111111",
@@ -271,10 +278,11 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     schemeGroupSlug: "mental_health",
     eligibility: "Open to everyone — the service is free and confidential.",
     benefits:
-      "24×7 free tele-mental-health counselling and support. Dial 14416 (or 1-800-891-4416) from anywhere in India.",
+      "24×7 free tele-mental-health support in 20+ languages — counselling, psychotherapy, psychiatric consultation and referrals. Dial toll-free 14416 or 1800-89-14416 from anywhere in India.",
     documentsRequired: [],
     applicationUrl: "https://telemanas.mohfw.gov.in/",
     officialSourceUrl: "https://telemanas.mohfw.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "ba222222-2222-4222-8222-222222222222",
