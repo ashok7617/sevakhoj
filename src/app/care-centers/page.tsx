@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { listFacilities } from "@/lib/queries";
+import { listFacilities, listFacilityStates } from "@/lib/queries";
 import { FacilityCard } from "@/components/FacilityCard";
 import { DbNotice } from "@/components/DbNotice";
 import { GROUPS, groupBySlug } from "@/lib/groups";
@@ -18,6 +18,7 @@ export default async function CareCentersPage({
   const state = sp.state?.trim() || undefined;
 
   const { rows: facilities, dbAvailable } = await listFacilities({ q, group, state, limit: 200 });
+  const { rows: states } = await listFacilityStates();
   const activeGroup = group ? groupBySlug(group) : undefined;
 
   return (
@@ -46,6 +47,18 @@ export default async function CareCentersPage({
           {GROUPS.map((g) => (
             <option key={g.slug} value={g.slug}>
               {g.name}
+            </option>
+          ))}
+        </select>
+        <select
+          name="state"
+          defaultValue={state ?? ""}
+          className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-emerald-500"
+        >
+          <option value="">All states</option>
+          {states.map((s) => (
+            <option key={s} value={s}>
+              {s}
             </option>
           ))}
         </select>

@@ -68,6 +68,18 @@ export function listFacilities(opts: {
   );
 }
 
+/** Distinct states that have at least one facility (for the state filter). */
+export function listFacilityStates(): Promise<Result<string[]>> {
+  return safe(async () => {
+    const rows = await db
+      .selectDistinct({ state: facilities.state })
+      .from(facilities)
+      .where(sql`${facilities.state} is not null and ${facilities.state} <> ''`)
+      .orderBy(facilities.state);
+    return rows.map((r) => r.state).filter((s): s is string => Boolean(s));
+  }, []);
+}
+
 export function getFacility(id: string): Promise<Result<Facility | null>> {
   return safe(async () => {
     const rows = (await db
