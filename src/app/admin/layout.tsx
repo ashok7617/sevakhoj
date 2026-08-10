@@ -30,11 +30,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         </div>
       </div>
 
-      {/* Unauthenticated admin — must be protected before any real deployment. */}
-      <div className="border-b border-rose-200 bg-rose-50">
-        <div className="mx-auto max-w-7xl px-4 py-2 text-xs text-rose-800">
-          ⚠ <strong>No authentication yet.</strong> This admin area is open in the
-          scaffold. Add auth + role-based access control before deploying.
+      {/* Admin is protected by a shared password (HTTP Basic Auth via middleware). */}
+      <div className="border-b border-amber-200 bg-amber-50">
+        <div className="mx-auto max-w-7xl px-4 py-2 text-xs text-amber-800">
+          🔒 Protected by a shared admin password. For multiple admins or
+          fine-grained control, add proper auth + role-based access later.
         </div>
       </div>
 
