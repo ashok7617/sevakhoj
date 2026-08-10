@@ -104,12 +104,15 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     department: "Social Welfare Department, Uttar Pradesh",
     beneficiaryCategory: "Senior Citizens (eligible households)",
     schemeGroupSlug: "senior_citizens",
-    eligibility: "UP resident senior citizens meeting income criteria (verify on portal).",
-    benefits: "Monthly state old-age pension.",
-    documentsRequired: [],
+    eligibility:
+      "Uttar Pradesh residents aged 60 and above with total annual income up to ₹46,080 (rural) or ₹56,460 (urban).",
+    benefits:
+      "Monthly old-age pension credited by DBT to the beneficiary's bank account (₹1,000/month in recent years — confirm the current rate on the SSPY portal).",
+    documentsRequired: ["Age proof", "Income certificate", "Aadhaar", "Bank details"],
     applicationUrl: "https://sspy-up.gov.in/",
-    officialSourceUrl: "https://sspy-up.gov.in/",
+    officialSourceUrl: "https://sspy-up.gov.in/EnglishPages/oldage_en.aspx",
     sourceKey: "up_social_welfare",
+    verificationStatus: "government_verified",
   },
 
   /* ---- Additional central schemes (needs_verification; confirm details on
@@ -124,12 +127,13 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Senior citizens (60+)",
     schemeGroupSlug: "senior_citizens",
     eligibility:
-      "Senior citizens aged 60 and above. Individual components (senior/continuous care homes, maintenance, assistive devices) have their own criteria — verify on the official portal.",
+      "Senior citizens aged 60 and above; individual components have their own criteria.",
     benefits:
-      "Umbrella scheme for the elderly: support to old-age / continuous-care homes (IPSrC), physical aids & assisted-living devices, awareness, and the national Elderline helpline 14567 for information, guidance and grievance redressal.",
+      "Umbrella scheme for the elderly (subsumed 2021): the Integrated Programme for Senior Citizens (IPSrC) funds NGOs running senior-citizens' / continuous-care homes with free shelter, nutrition and medicare for indigent elders; a State Action Plan (geriatric caregivers, cataract drives); Rashtriya Vayoshri Yojana (assistive devices); SAGE (elder-care start-ups); and the national Elderline helpline 14567 (from 1 Oct 2021) for information, guidance, emotional support and intervention in cases of abuse.",
     documentsRequired: ["Age proof", "Aadhaar"],
     applicationUrl: "https://socialjustice.gov.in/",
-    officialSourceUrl: "https://socialjustice.gov.in/",
+    officialSourceUrl: "https://socialjustice.gov.in/schemes/43",
+    verificationStatus: "government_verified",
   },
   {
     id: "b2222222-2222-4222-8222-222222222222",
@@ -210,12 +214,13 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Persons with disabilities needing aids & appliances",
     schemeGroupSlug: "disability",
     eligibility:
-      "Persons with disabilities holding a disability certificate, within the scheme's income limit. Verify the current income ceiling on the official portal.",
+      "Persons with disabilities holding a disability certificate of at least 40%, with monthly income up to ₹22,500 for full (100%) assistance (for dependents, the parents'/guardians' income up to ₹30,000/month).",
     benefits:
-      "Free or subsidised assistive aids & appliances — e.g. motorised tricycles, wheelchairs, hearing aids, prostheses, and smart canes.",
-    documentsRequired: ["Disability certificate / UDID", "Income certificate", "Aadhaar"],
+      "Free or subsidised assistive aids & appliances — e.g. motorised tricycles, wheelchairs, hearing aids, prostheses and smart canes — fitted through ALIMCO camps, including corrective surgery where needed.",
+    documentsRequired: ["Disability certificate / UDID (40%+)", "Income certificate", "Aadhaar"],
     applicationUrl: "https://disabilityaffairs.gov.in/",
-    officialSourceUrl: "https://disabilityaffairs.gov.in/",
+    officialSourceUrl: "https://disabilityaffairs.gov.in/content/page/adip.php",
+    verificationStatus: "government_verified",
   },
   {
     id: "b7777777-7777-4777-8777-777777777777",
@@ -226,13 +231,14 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Pregnant women & lactating mothers",
     schemeGroupSlug: "women",
     eligibility:
-      "Pregnant and lactating mothers for the first living child (and for a second child if the child is a girl, per current norms). Verify eligibility and instalment conditions on the official portal.",
+      "Pregnant and lactating mothers, excluding those in regular employment with the Central/State Government or PSUs, or already receiving similar benefits under another law.",
     benefits:
-      "Conditional maternity cash benefit paid in instalments to partly compensate wage loss and support nutrition and health.",
+      "₹5,000 for the first child in two instalments (₹3,000 after antenatal check-up, ₹2,000 after birth and the first immunisation cycle); and ₹6,000 for a second child if the child is a girl.",
     documentsRequired: ["MCP (mother–child protection) card", "Aadhaar", "Bank details"],
-    applicationUrl: "https://wcd.gov.in/",
-    officialSourceUrl: "https://wcd.gov.in/",
+    applicationUrl: "https://wcd.gov.in/women/pradhan-mantri-matru-vandana-yojna",
+    officialSourceUrl: "https://wcd.gov.in/women/pradhan-mantri-matru-vandana-yojna",
     sourceKey: "vatsalya",
+    verificationStatus: "government_verified",
   },
   {
     id: "b8888888-8888-4888-8888-888888888888",
@@ -243,13 +249,14 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Women affected by violence",
     schemeGroupSlug: "women",
     eligibility:
-      "Any woman (and girls below 18, in coordination with child-protection authorities) affected by physical, sexual, emotional or economic abuse — regardless of income.",
+      "Any woman (and girls below 18, in coordination with child-protection authorities) affected by physical, sexual, emotional or economic abuse — regardless of income or marital status.",
     benefits:
-      "Integrated support under one roof: emergency shelter, medical aid, police and legal assistance, and psychosocial counselling. Reach the Women Helpline on 181.",
+      "Integrated support under one roof (since 2015): emergency and temporary shelter (up to 5 days), medical aid, police assistance, legal aid and advice, and psycho-social counselling — linked to the 24×7 Women Helpline 181.",
     documentsRequired: [],
-    applicationUrl: "https://wcd.gov.in/",
-    officialSourceUrl: "https://wcd.gov.in/",
+    applicationUrl: "https://wcd.gov.in/offerings/one-stop-centre-scheme",
+    officialSourceUrl: "https://wcd.gov.in/offerings/one-stop-centre-scheme",
     sourceKey: "vatsalya",
+    verificationStatus: "government_verified",
   },
   {
     id: "b9999999-9999-4999-8999-999999999999",
@@ -293,12 +300,13 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Persons engaged in begging; transgender persons",
     schemeGroupSlug: "homeless",
     eligibility:
-      "Persons engaged in the act of begging / in destitution, and transgender persons, for rehabilitation and welfare. Verify on the official portal.",
+      "Persons engaged in the act of begging / in destitution, and transgender persons, for rehabilitation and welfare.",
     benefits:
-      "Comprehensive rehabilitation — shelter, medical care, counselling, education and skill development / livelihood support; plus scholarships and welfare measures for transgender persons.",
+      "Umbrella scheme with two sub-schemes. For transgender persons: scholarships (Class IX to post-graduation), composite medical care including gender-reaffirmation surgery (in convergence with PM-JAY), 'Garima Greh' shelter homes, a state protection cell, and a national portal & helpline. For persons engaged in begging: survey & identification, mobilisation, rescue / shelter homes and comprehensive resettlement.",
     documentsRequired: [],
-    applicationUrl: "https://socialjustice.gov.in/",
-    officialSourceUrl: "https://socialjustice.gov.in/",
+    applicationUrl: "https://socialjustice.gov.in/schemes/99",
+    officialSourceUrl: "https://socialjustice.gov.in/schemes/99",
+    verificationStatus: "government_verified",
   },
   {
     id: "ba333333-3333-4333-8333-333333333333",
@@ -309,11 +317,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Children who lost parents / guardian to COVID-19",
     schemeGroupSlug: "children",
     eligibility:
-      "Children who lost both parents, or the surviving parent / legal guardian, to COVID-19 between 11 March 2020 and 28 February 2022 and were under 18 at the time. Verify on the official portal.",
+      "Children who lost both parents, the surviving parent, a legal guardian or adoptive parents to COVID-19 between 11 March 2020 and 5 May 2023, and who were under 18 at the time.",
     benefits:
-      "Support up to age 23: a monthly stipend from 18–23, a ₹10 lakh corpus at 23, free schooling / education support, and health cover under Ayushman Bharat (₹5 lakh).",
+      "A corpus built to ₹10 lakh by age 18; a monthly stipend from 18 to 23 (from the corpus placed in a Post Office Monthly Income Scheme); the ₹10 lakh paid as a lump sum at 23; free schooling (KV / JNV / KGBV or aided schools) with scholarships Class 1–12; and ₹5 lakh health cover under Ayushman Bharat till age 23.",
     documentsRequired: [],
     applicationUrl: "https://pmcaresforchildren.in/",
     officialSourceUrl: "https://pmcaresforchildren.in/",
+    verificationStatus: "government_verified",
   },
 ];
