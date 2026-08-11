@@ -102,6 +102,7 @@ export const GAZETTEER: Record<string, Place> = {
   bhubaneswar: { city: "Bhubaneswar", district: "Khordha", state: "Odisha", lat: 20.2961, lng: 85.8245 },
   ranchi: { city: "Ranchi", district: "Ranchi", state: "Jharkhand", lat: 23.3441, lng: 85.3096 },
   raipur: { city: "Raipur", district: "Raipur", state: "Chhattisgarh", lat: 21.2514, lng: 81.6296 },
+  bhilai: { city: "Bhilai", district: "Durg", state: "Chhattisgarh", lat: 21.1938, lng: 81.3509 },
   visakhapatnam: { city: "Visakhapatnam", district: "Visakhapatnam", state: "Andhra Pradesh", lat: 17.6868, lng: 83.2185 },
   vizag: { city: "Visakhapatnam", district: "Visakhapatnam", state: "Andhra Pradesh", lat: 17.6868, lng: 83.2185 },
   coimbatore: { city: "Coimbatore", district: "Coimbatore", state: "Tamil Nadu", lat: 11.0168, lng: 76.9558 },
