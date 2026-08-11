@@ -41,6 +41,15 @@ type Rec = {
   phone?: string;
   email?: string;
   website: string; // official source
+  // Defaults to "needs_verification". Set "government_verified" ONLY for
+  // official government institutions/bodies whose existence & details are
+  // published on an official government (.gov.in / .nic.in / .edu.in) site.
+  verificationStatus?:
+    | "government_verified"
+    | "registration_verified"
+    | "phone_verified"
+    | "user_submitted"
+    | "needs_verification";
 };
 
 const RECORDS: Rec[] = [
@@ -1110,6 +1119,7 @@ const RECORDS: Rec[] = [
     district: "Hyderabad",
     state: "Telangana",
     website: "https://niepid.nic.in/",
+    verificationStatus: "government_verified",
   },
   {
     slug: "niepmd-chennai",
@@ -1125,6 +1135,7 @@ const RECORDS: Rec[] = [
     district: "Chengalpattu",
     state: "Tamil Nadu",
     website: "https://niepmd.nic.in/",
+    verificationStatus: "government_verified",
   },
   {
     slug: "ayjnishd-mumbai",
@@ -1139,6 +1150,7 @@ const RECORDS: Rec[] = [
     district: "Mumbai",
     state: "Maharashtra",
     website: "https://ayjnihh.nic.in/",
+    verificationStatus: "government_verified",
   },
 
   /* ---- Children — Don Bosco street-children shelters ---- */
@@ -1685,6 +1697,7 @@ const RECORDS: Rec[] = [
     district: "Chandigarh",
     state: "Chandigarh",
     website: "https://www.griid.edu.in/",
+    verificationStatus: "government_verified",
   },
   {
     slug: "sorem-chandigarh",
@@ -1791,12 +1804,14 @@ async function main() {
         longitude: geo?.lng,
         officialSourceUrl: r.website,
         retrievedAt: new Date(),
-        verificationStatus: "needs_verification",
+        verificationStatus: r.verificationStatus ?? "needs_verification",
+        lastVerified: r.verificationStatus === "government_verified" ? new Date() : undefined,
       });
       console.log(`  + ${r.name}${geo ? "" : "  (not geocoded)"}`);
       if (!GAZETTEER[r.city.toLowerCase()]) await sleep(1100); // Nominatim rate limit
     }
-    console.log(`✓ starter facilities: ${RECORDS.length} (geocoded ${geocoded}). All needs_verification, sourced from official websites.`);
+    const govVerified = RECORDS.filter((r) => r.verificationStatus === "government_verified").length;
+    console.log(`✓ starter facilities: ${RECORDS.length} (geocoded ${geocoded}; ${govVerified} government_verified, rest needs_verification). Sourced from official websites.`);
   } finally {
     await client.end();
   }

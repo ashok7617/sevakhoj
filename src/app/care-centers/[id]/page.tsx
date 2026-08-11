@@ -107,8 +107,31 @@ export default async function FacilityPage({
           ? ` · Last verified ${new Date(f.lastVerified).toLocaleDateString("en-IN")}`
           : ""}
       </div>
+
+      <div className="mt-4">
+        <a
+          href={reportMailto(f.name, f.id, [f.city, f.state].filter(Boolean).join(", "))}
+          className="inline-flex items-center gap-1 rounded-lg border border-slate-300 px-3 py-1.5 text-xs text-slate-600 hover:border-amber-300 hover:text-amber-700"
+        >
+          ⚠ Report incorrect information
+        </a>
+      </div>
     </div>
   );
+}
+
+const REPORT_EMAIL = "ashok.n.kumar2@gmail.com";
+
+/** mailto: link that pre-fills a correction report for a facility listing. */
+function reportMailto(name: string, id: string, location: string) {
+  const subject = `Correction for listing: ${name}`;
+  const body =
+    `I'd like to report incorrect information for this listing on SevaKhoj.\n\n` +
+    `Facility: ${name}\n` +
+    (location ? `Location: ${location}\n` : "") +
+    `Link: https://sevakhoj.com/care-centers/${id}\n\n` +
+    `What is incorrect (address, phone, closed, wrong category, etc.) and, if you know, the correct details:\n`;
+  return `mailto:${REPORT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 function Field({ label, value }: { label: string; value: string }) {
