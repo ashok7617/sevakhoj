@@ -1883,10 +1883,15 @@ const RECORDS: Rec[] = [
     residential: false,
     costType: "mixed",
     services: ["Special education", "Autism intervention", "Vocational training", "Therapy"],
+    address: "C-10/8, Vasant Vihar",
     city: "New Delhi",
     district: "New Delhi",
     state: "Delhi",
-    website: "https://www.tamana.org/",
+    pincode: "110057",
+    phone: "011-26148269",
+    email: "info@tamana.ngo",
+    website: "https://tamana.ngo/",
+    verificationStatus: "phone_verified",
   },
 
   /* ---- SOS Children's Villages — more locations (new UT: Puducherry) ---- */
