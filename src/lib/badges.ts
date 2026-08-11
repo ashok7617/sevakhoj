@@ -21,9 +21,9 @@ export const BADGES: Record<
     note: "Registration information confirmed. Not an endorsement of service quality.",
   },
   phone_verified: {
-    label: "Phone Verified",
+    label: "Contact Verified",
     className: "bg-indigo-100 text-indigo-800 ring-indigo-600/20",
-    note: "Organization confirmed its contact information.",
+    note: "Contact details confirmed against the organization's official source.",
   },
   user_submitted: {
     label: "User Submitted",

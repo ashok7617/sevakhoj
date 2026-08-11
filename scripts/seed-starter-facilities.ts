@@ -135,6 +135,7 @@ const RECORDS: Rec[] = [
     phone: "022-61381100",
     email: "responsedignity@dignityfoundation.com",
     website: "https://www.dignityfoundation.com",
+    verificationStatus: "phone_verified",
   },
   {
     slug: "nightingales-bengaluru",
@@ -153,6 +154,7 @@ const RECORDS: Rec[] = [
     phone: "080-42426565",
     email: "contact@nightingaleseldercare.com",
     website: "https://www.nightingaleseldercare.com",
+    verificationStatus: "phone_verified",
   },
   {
     slug: "apnaghar-lucknow",
@@ -1085,10 +1087,15 @@ const RECORDS: Rec[] = [
     residential: true,
     costType: "free",
     services: ["Residential care", "Meals", "Medical care"],
+    address: "D.No. 46-740, Budhavarapeta, Beside Canara Bank",
     city: "Kurnool",
     district: "Kurnool",
     state: "Andhra Pradesh",
+    pincode: "518002",
+    phone: "9849977577",
+    email: "info@serudsindia.org",
     website: "https://serudsindia.org/elders/",
+    verificationStatus: "phone_verified",
   },
   {
     slug: "mathru-chaya-bengaluru",
@@ -1207,10 +1214,15 @@ const RECORDS: Rec[] = [
     residential: true,
     costType: "free",
     services: ["Inpatient hospice care", "Home-care", "Pain & palliative care"],
+    address: "Old Airport–Varthur Main Road, Kundalahalli Gate, Marathahalli",
     city: "Bengaluru",
     district: "Bengaluru",
     state: "Karnataka",
+    pincode: "560037",
+    phone: "080-42685666",
+    email: "info@karunashraya.org",
     website: "https://karunashraya.org/",
+    verificationStatus: "phone_verified",
   },
   {
     slug: "pallium-india-trivandrum",
@@ -1220,11 +1232,13 @@ const RECORDS: Rec[] = [
     gender: "all",
     residential: false,
     costType: "free",
-    services: ["Home-care visits", "Outpatient clinic", "Pain relief", "Training"],
+    services: ["Home-care visits", "Outpatient clinic", "Pain relief", "Training", "Helpline +91 96458 84889"],
     city: "Thiruvananthapuram",
     district: "Thiruvananthapuram",
     state: "Kerala",
+    phone: "+91-9645884889",
     website: "https://palliumindia.org/",
+    verificationStatus: "phone_verified",
   },
   {
     slug: "cansupport-delhi",
@@ -1235,10 +1249,15 @@ const RECORDS: Rec[] = [
     residential: false,
     costType: "free",
     services: ["Home-care", "Outpatient clinic", "Day care", "Counselling"],
+    address: "60/2D, Indian Oil Bhawan Compound, Yusuf Sarai",
     city: "New Delhi",
     district: "New Delhi",
     state: "Delhi",
+    pincode: "110016",
+    phone: "011-41010539",
+    email: "info@cansupport.org",
     website: "https://www.cansupport.org/",
+    verificationStatus: "phone_verified",
   },
 
   /* ---- Homeless persons with mental illness ---- */
@@ -1811,7 +1830,8 @@ async function main() {
       if (!GAZETTEER[r.city.toLowerCase()]) await sleep(1100); // Nominatim rate limit
     }
     const govVerified = RECORDS.filter((r) => r.verificationStatus === "government_verified").length;
-    console.log(`✓ starter facilities: ${RECORDS.length} (geocoded ${geocoded}; ${govVerified} government_verified, rest needs_verification). Sourced from official websites.`);
+    const contactVerified = RECORDS.filter((r) => r.verificationStatus === "phone_verified").length;
+    console.log(`✓ starter facilities: ${RECORDS.length} (geocoded ${geocoded}; ${govVerified} government_verified, ${contactVerified} contact_verified, rest needs_verification). Sourced from official websites.`);
   } finally {
     await client.end();
   }
