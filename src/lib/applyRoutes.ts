@@ -11,6 +11,7 @@ export function applyPathForScheme(
   if (s.categorySlug === "workers" && s.governmentLevel === "state") {
     if (s.state === "Uttar Pradesh") return "/apply/up-bocw";
     if (s.state === "Maharashtra") return "/apply/mh-bocw";
+    if (s.state === "Karnataka") return "/apply/ka-bocw";
   }
   return null;
 }
