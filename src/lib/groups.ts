@@ -37,6 +37,13 @@ export const GROUPS: Group[] = [
     phase1: false,
   },
   {
+    slug: "students",
+    name: "Students / Scholarships",
+    blurb: "Government scholarships — pre-matric, post-matric, merit and category-based.",
+    emoji: "🎓",
+    phase1: false,
+  },
+  {
     slug: "mental_health",
     name: "Mental Health",
     blurb: "Psychiatric care, rehabilitation homes, and halfway homes.",

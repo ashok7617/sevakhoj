@@ -76,6 +76,7 @@ const CARE_CATEGORIES: {
 const SCHEME_CATEGORIES = [
   ["children", "Children"],
   ["women", "Women"],
+  ["students", "Students / Scholarships"],
   ["widows", "Widows"],
   ["senior_citizens", "Senior Citizens"],
   ["disability", "Persons with Disabilities"],
