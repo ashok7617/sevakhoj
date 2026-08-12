@@ -1,6 +1,8 @@
+import Link from "next/link";
 import type { Scheme } from "@/lib/queries";
 import { VerificationBadge } from "./VerificationBadge";
 import type { VerificationStatus } from "@/lib/badges";
+import { applyPathForScheme } from "@/lib/applyRoutes";
 
 const LEVEL_LABEL: Record<string, string> = {
   central: "Central",
@@ -11,6 +13,7 @@ const LEVEL_LABEL: Record<string, string> = {
 };
 
 export function SchemeCard({ s }: { s: Scheme }) {
+  const applyPath = applyPathForScheme(s);
   return (
     <article className="rounded-xl border border-slate-200 bg-white p-4">
       <div className="flex items-start justify-between gap-3">
@@ -57,6 +60,17 @@ export function SchemeCard({ s }: { s: Scheme }) {
       ) : null}
 
       <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
+        {applyPath ? (
+          <Link
+            href={applyPath}
+            className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-emerald-700"
+          >
+            Apply with SevaKhoj
+            <span className="rounded bg-white/25 px-1 py-px text-[0.6rem] font-medium">
+              pre-filled
+            </span>
+          </Link>
+        ) : null}
         {s.sourceLastUpdated ? (
           <span className="text-xs text-slate-400">
             Source dated {new Date(s.sourceLastUpdated).toISOString().slice(0, 10)}
@@ -67,9 +81,13 @@ export function SchemeCard({ s }: { s: Scheme }) {
             href={s.applicationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-emerald-700 hover:underline"
+            className={
+              applyPath
+                ? "text-slate-500 hover:underline"
+                : "font-medium text-emerald-700 hover:underline"
+            }
           >
-            Apply on official portal ↗
+            {applyPath ? "Official portal ↗" : "Apply on official portal ↗"}
           </a>
         ) : null}
         {s.officialSourceUrl ? (
