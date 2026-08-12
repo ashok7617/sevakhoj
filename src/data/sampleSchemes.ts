@@ -343,8 +343,10 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     documentsRequired: ["Aadhaar", "Age proof (70+)"],
     applicationProcess:
       "Enrol for the Ayushman Vay Vandana Card on the PM-JAY / Ayushman app or at an empanelled hospital / Common Service Centre with your Aadhaar.",
-    applicationUrl: "https://pmjay.gov.in/",
+    applicationUrl: "https://beneficiary.nha.gov.in/",
     officialSourceUrl: "https://pmjay.gov.in/",
+    sourceLastUpdated: "2024-10-29",
+    verificationStatus: "government_verified",
   },
   {
     id: "c2222222-2222-4222-8222-222222222222",
@@ -360,7 +362,8 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
       "A government-backed 5-year savings scheme paying quarterly interest (rate revised each quarter), with a maximum deposit of ₹30 lakh and tax benefits under Section 80C.",
     documentsRequired: ["Age proof", "PAN", "Aadhaar", "Passport-size photo"],
     applicationUrl: "https://www.indiapost.gov.in/",
-    officialSourceUrl: "https://www.indiapost.gov.in/",
+    officialSourceUrl: "https://www.nsiindia.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "c3333333-3333-4333-8333-333333333333",
@@ -376,6 +379,7 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     documentsRequired: [],
     applicationUrl: "https://mohfw.gov.in/",
     officialSourceUrl: "https://mohfw.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "c4444444-4444-4444-8444-444444444444",
@@ -392,6 +396,7 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     documentsRequired: ["Disability certificate / assessment", "Aadhaar", "Photo"],
     applicationUrl: "https://www.swavlambancard.gov.in/",
     officialSourceUrl: "https://www.swavlambancard.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "c5555555-5555-4555-8555-555555555555",
@@ -404,10 +409,13 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     eligibility:
       "Grant-in-aid to registered voluntary organisations / NGOs running services for persons with disabilities. Individuals access services through these organisations.",
     benefits:
-      "Funds NGO-run services for persons with disabilities — special schools, early-intervention, community-based rehabilitation, vocational training and more.",
+      "Funds NGO-run services for persons with disabilities — special schools, early-intervention, community-based rehabilitation, half-way homes, vocational training and more (~600 NGOs funded yearly).",
     documentsRequired: [],
+    applicationProcess:
+      "NGOs register on the NITI Aayog NGO Darpan portal and apply for grant-in-aid via the e-Anudaan portal (grants.depwd.gov.in). Individuals access services through these funded organisations.",
     applicationUrl: "https://disabilityaffairs.gov.in/",
     officialSourceUrl: "https://disabilityaffairs.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "c6666666-6666-4666-8666-666666666666",
@@ -420,11 +428,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     eligibility:
       "Women without social or economic support — destitute, deserted, widows, survivors of violence or trafficking, women released from prison, etc.",
     benefits:
-      "Temporary residential shelter with food, clothing, medical care, counselling, legal aid, and rehabilitation/skilling to help women rebuild their lives.",
+      "Temporary residential shelter with food, clothing, medical care, counselling, legal aid, and rehabilitation/skilling to help women rebuild their lives. (Swadhar Greh and Ujjawala are now delivered as 'Shakti Sadan' under Mission Shakti.)",
     documentsRequired: [],
     applicationUrl: "https://wcd.gov.in/",
     officialSourceUrl: "https://wcd.gov.in/",
     sourceKey: "vatsalya",
+    verificationStatus: "government_verified",
   },
   {
     id: "c7777777-7777-4777-8777-777777777777",
@@ -437,11 +446,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     eligibility:
       "A national awareness & multi-sectoral programme (not a cash transfer) for the girl child, implemented across districts.",
     benefits:
-      "Action to improve the child sex ratio and promote the survival, protection and education of girls — advocacy, awareness, and convergence with schooling and health services.",
+      "Action to improve the child sex ratio and promote the survival, protection and education of girls — advocacy, awareness, and convergence with schooling and health services. A tri-ministerial effort (Women & Child Development, Health, and Education), launched 2015.",
     documentsRequired: [],
     applicationUrl: "https://wcd.gov.in/",
     officialSourceUrl: "https://wcd.gov.in/",
     sourceKey: "vatsalya",
+    verificationStatus: "government_verified",
   },
   {
     id: "c8888888-8888-4888-8888-888888888888",
@@ -452,12 +462,13 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Girl child (savings for education & future)",
     schemeGroupSlug: "women",
     eligibility:
-      "An account for a girl child below 10 years, opened by a parent/guardian (generally up to two girls per family, with exceptions). Verify current rules on the portal.",
+      "An account for a girl child below 10 years, opened by a parent/guardian (generally up to two girls per family, with exceptions).",
     benefits:
-      "A small-savings account with a high government-set interest rate (revised quarterly) and tax benefits; matures for the girl's higher education or marriage.",
+      "A small-savings account — minimum ₹250, up to ₹1.5 lakh per year, deposits for 15 years — with a high government-set interest rate (revised quarterly) and Section 80C tax benefits. The account matures 21 years after opening, for the girl's higher education or marriage (managed by the guardian until she turns 18).",
     documentsRequired: ["Girl's birth certificate", "Guardian ID & address proof"],
     applicationUrl: "https://www.indiapost.gov.in/",
-    officialSourceUrl: "https://www.indiapost.gov.in/",
+    officialSourceUrl: "https://www.nsiindia.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "c9999999-9999-4999-8999-999999999999",
@@ -465,15 +476,17 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     governmentLevel: "central",
     ministry: "Ministry of Women & Child Development",
     department: "Mission Shakti (Samarthya) — Palna",
-    beneficiaryCategory: "Children (6 months–6 years) of working mothers",
+    beneficiaryCategory: "Children (6 months–6 years) — crèche for all mothers",
     schemeGroupSlug: "children",
-    eligibility: "Children aged 6 months to 6 years whose mothers are working.",
+    eligibility:
+      "Children aged 6 months to 6 years. Under the renamed Palna scheme, crèche facilities are available to all mothers, irrespective of their employment status.",
     benefits:
-      "Day-care crèche facilities providing a safe environment, supplementary nutrition, growth monitoring, health check-ups and early stimulation, so mothers can work.",
+      "Day-care crèche facilities in a safe, secure environment — supplementary nutrition, growth monitoring, health check-ups/immunisation and early stimulation for the child.",
     documentsRequired: [],
     applicationUrl: "https://wcd.gov.in/",
     officialSourceUrl: "https://wcd.gov.in/",
     sourceKey: "vatsalya",
+    verificationStatus: "government_verified",
   },
   {
     id: "ca111111-1111-4111-8111-111111111111",
@@ -490,6 +503,7 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     documentsRequired: [],
     applicationUrl: "https://poshanabhiyaan.gov.in/",
     officialSourceUrl: "https://poshanabhiyaan.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "ca222222-2222-4222-8222-222222222222",
@@ -506,5 +520,6 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     documentsRequired: ["Aadhaar", "Bank / post-office account", "Mobile number"],
     applicationUrl: "https://www.pfrda.org.in/",
     officialSourceUrl: "https://www.pfrda.org.in/",
+    verificationStatus: "government_verified",
   },
 ];
