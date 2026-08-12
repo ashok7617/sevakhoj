@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { listSchemes } from "@/lib/queries";
+import { listSchemes, listSchemeStates } from "@/lib/queries";
 import { SchemeCard } from "@/components/SchemeCard";
 import { DbNotice } from "@/components/DbNotice";
 import { GROUPS } from "@/lib/groups";
@@ -17,14 +17,23 @@ const LEVELS = [
 export default async function SchemesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string; group?: string; level?: string }>;
+  searchParams: Promise<{
+    q?: string;
+    group?: string;
+    level?: string;
+    state?: string;
+  }>;
 }) {
   const sp = await searchParams;
   const q = sp.q?.trim() || undefined;
   const group = sp.group?.trim() || undefined;
   const level = sp.level?.trim() || undefined;
+  const state = sp.state?.trim() || undefined;
 
-  const { rows: schemes, dbAvailable } = await listSchemes({ q, group, level });
+  const [{ rows: schemes, dbAvailable }, { rows: states }] = await Promise.all([
+    listSchemes({ q, group, level, state }),
+    listSchemeStates(),
+  ]);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
@@ -67,13 +76,27 @@ export default async function SchemesPage({
             </option>
           ))}
         </select>
+        {states.length > 0 && (
+          <select
+            name="state"
+            defaultValue={state ?? ""}
+            className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-emerald-500"
+          >
+            <option value="">All states</option>
+            {states.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+        )}
         <button
           type="submit"
           className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
         >
           Apply
         </button>
-        {(q || group || level) && (
+        {(q || group || level || state) && (
           <Link
             href="/schemes"
             className="rounded-lg border border-slate-300 px-4 py-2 text-sm text-slate-600 hover:bg-slate-100"

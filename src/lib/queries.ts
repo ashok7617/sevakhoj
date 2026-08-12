@@ -100,9 +100,10 @@ export function listSchemes(opts: {
   q?: string;
   group?: string;
   level?: string;
+  state?: string;
   limit?: number;
 }): Promise<Result<Scheme[]>> {
-  const { q, group, level, limit = 60 } = opts;
+  const { q, group, level, state, limit = 60 } = opts;
   const conds: (SQL | undefined)[] = [];
   if (q) {
     conds.push(
@@ -121,6 +122,7 @@ export function listSchemes(opts: {
         level as "central" | "state" | "ut" | "district" | "local",
       ),
     );
+  if (state) conds.push(eq(governmentSchemes.state, state));
 
   return safe(
     () =>
@@ -139,6 +141,18 @@ export function listSchemes(opts: {
         .limit(limit) as Promise<Scheme[]>,
     [],
   );
+}
+
+/** Distinct states that have at least one state-level scheme (for the filter). */
+export function listSchemeStates(): Promise<Result<string[]>> {
+  return safe(async () => {
+    const rows = await db
+      .selectDistinct({ state: governmentSchemes.state })
+      .from(governmentSchemes)
+      .where(sql`${governmentSchemes.state} is not null and ${governmentSchemes.state} <> ''`)
+      .orderBy(governmentSchemes.state);
+    return rows.map((r) => r.state).filter((s): s is string => Boolean(s));
+  }, []);
 }
 
 export type NearbyFacility = {
