@@ -873,4 +873,40 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     officialSourceUrl: "https://tsseniorcitizens.cgg.gov.in/",
     verificationStatus: "government_verified",
   },
+
+  /* ---- Advisory entries: states without a verifiable dedicated senior-citizen
+     card portal. Kept honest (needs_verification) so seniors get real guidance
+     instead of a blank — NOT presented as a confirmed online card process. ---- */
+  {
+    id: "db777777-7777-4777-8777-777777777777",
+    schemeName: "Senior Citizen ID Card — Uttar Pradesh (Advisory)",
+    governmentLevel: "state",
+    state: "Uttar Pradesh",
+    department: "Samaj Kalyan Vibhag (Social Welfare), Uttar Pradesh",
+    beneficiaryCategory: "Senior citizens (60+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility: "Residents of Uttar Pradesh aged 60 and above.",
+    benefits:
+      "Uttar Pradesh does not appear to issue a distinct senior-citizen identity card through a dedicated online portal. Seniors can instead register for the state Old Age Pension via the Samaj Kalyan Vibhag portal, and use standard documents (Aadhaar, etc.) as age proof. Please confirm the current position with your local Tehsildar / Samaj Kalyan office — and avoid third-party 'senior citizen card' websites that charge a fee, as they are not government-run.",
+    documentsRequired: ["Aadhaar", "Age proof", "Residence proof"],
+    applicationUrl: "https://sspy-up.gov.in/",
+    officialSourceUrl: "https://sspy-up.gov.in/",
+    verificationStatus: "needs_verification",
+  },
+  {
+    id: "db888888-8888-4888-8888-888888888888",
+    schemeName: "Senior Citizen ID Card — West Bengal (Advisory)",
+    governmentLevel: "state",
+    state: "West Bengal",
+    department: "Dept. of Women & Child Development and Social Welfare, West Bengal",
+    beneficiaryCategory: "Senior citizens (60+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility: "Residents of West Bengal aged 60 and above.",
+    benefits:
+      "West Bengal does not currently offer a dedicated online portal to apply for a senior-citizen identity card. Where a card is issued, it is handled offline through your local BDO, Municipality or Panchayat office. Seniors can also access state pensions (e.g. Jai Bangla) via the social-welfare portal. Please confirm the current process at your local office — and avoid third-party 'senior citizen card' websites that charge a fee, as they are not government-run.",
+    documentsRequired: ["Aadhaar", "Age proof", "Residence proof"],
+    applicationUrl: "https://socialsecurity.wb.gov.in/",
+    officialSourceUrl: "https://socialsecurity.wb.gov.in/",
+    verificationStatus: "needs_verification",
+  },
 ];
