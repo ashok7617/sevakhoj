@@ -840,4 +840,37 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     officialSourceUrl: "https://sevasindhu.karnataka.gov.in/",
     verificationStatus: "government_verified",
   },
+  {
+    id: "db555555-5555-4555-8555-555555555555",
+    schemeName: "Kerala Senior Citizen Identity Card",
+    governmentLevel: "state",
+    state: "Kerala",
+    department: "Social Justice Department & LSGIs, Kerala",
+    beneficiaryCategory: "Senior citizens (60+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility: "Residents of Kerala aged 60 and above, with Aadhaar.",
+    benefits:
+      "Official identity-cum-eligibility card for senior citizens, issued by the Social Justice Department and Local Self-Government Institutions (apply online or offline) — confirms senior-citizen status and eligibility for state and central welfare schemes, especially social-security pensions.",
+    documentsRequired: ["Aadhaar", "Age proof", "Residence proof", "Photo"],
+    applicationUrl: "https://sjd.kerala.gov.in/",
+    officialSourceUrl: "https://sjd.kerala.gov.in/",
+    verificationStatus: "government_verified",
+  },
+  {
+    id: "db666666-6666-4666-8666-666666666666",
+    schemeName: "Telangana Senior Citizen Identity Card",
+    governmentLevel: "state",
+    state: "Telangana",
+    department:
+      "Dept. for Empowerment of PwD, Senior Citizens & Transgender Persons, Telangana",
+    beneficiaryCategory: "Senior citizens (60+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility: "Permanent residents of Telangana aged 60 and above.",
+    benefits:
+      "Official senior-citizen identity card — registered via the state Senior Citizens portal (or a MeeSeva centre) — used to access welfare schemes, financial aid, priority services, healthcare and travel concessions. Physical card typically issued in 7–21 days. State Elder Line: 14567.",
+    documentsRequired: ["Aadhaar", "Voter ID", "Residence proof", "Passport photos"],
+    applicationUrl: "https://tsseniorcitizens.cgg.gov.in/",
+    officialSourceUrl: "https://tsseniorcitizens.cgg.gov.in/",
+    verificationStatus: "government_verified",
+  },
 ];
