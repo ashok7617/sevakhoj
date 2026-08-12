@@ -771,4 +771,73 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     officialSourceUrl: "https://socialwelfare.delhi.gov.in/social/financials-assistance-schemes",
     verificationStatus: "government_verified",
   },
+
+  /* ---- Senior Citizen Identity Cards (state-issued; official portals only). ---- */
+  {
+    id: "db111111-1111-4111-8111-111111111111",
+    schemeName: "Delhi Senior Citizen Identity Card",
+    governmentLevel: "state",
+    state: "Delhi",
+    department: "Dept. of Social Welfare, GNCT of Delhi",
+    beneficiaryCategory: "Senior citizens (60+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility:
+      "Delhi residents aged 60 and above, with Aadhaar and proof of residence in Delhi.",
+    benefits:
+      "An official senior-citizen identity / age proof issued by the Delhi government (via the e-District portal) — used to access old-age pension, social-security schemes, healthcare help, travel concessions and priority government services. Approval typically 20–30 working days.",
+    documentsRequired: ["Aadhaar", "Proof of residence (Delhi)", "Age proof", "Passport photos"],
+    applicationUrl: "https://edistrict.delhi.gov.in/",
+    officialSourceUrl: "https://edistrict.delhi.gov.in/",
+    verificationStatus: "government_verified",
+  },
+  {
+    id: "db222222-2222-4222-8222-222222222222",
+    schemeName: "Tamil Nadu Senior Citizen Identity Card",
+    governmentLevel: "state",
+    state: "Tamil Nadu",
+    department: "Tamil Nadu e-Governance Agency (e-Sevai)",
+    beneficiaryCategory: "Senior citizens (60+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility: "Residents of Tamil Nadu aged 60 and above.",
+    benefits:
+      "Official senior-citizen ID / age-and-residence proof issued through the e-Sevai portal — recognised proof of age and residence used to access government and private concessions (healthcare, travel discounts, tax relief). Also available offline at VAO/Taluk/municipal offices. Approval typically 15–30 working days.",
+    documentsRequired: ["ID proof (Aadhaar)", "Address proof", "Age proof", "Photo"],
+    applicationUrl: "https://www.tnesevai.tn.gov.in/",
+    officialSourceUrl: "https://www.tnesevai.tn.gov.in/",
+    verificationStatus: "government_verified",
+  },
+  {
+    id: "db333333-3333-4333-8333-333333333333",
+    schemeName: "Maharashtra Senior Citizen Certificate",
+    governmentLevel: "state",
+    state: "Maharashtra",
+    department: "Revenue Department (Aaple Sarkar), Maharashtra",
+    beneficiaryCategory: "Senior citizens (60+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility:
+      "Permanent residents of Maharashtra (holding a domicile certificate) aged 60 and above.",
+    benefits:
+      "Official senior-citizen certificate (proof of age / senior status) issued via the Aaple Sarkar portal (Revenue Department) — used for government-scheme eligibility, public-transport fare concessions and priority services. Nominal service fee (~₹23–₹33); approval usually 7–15 days.",
+    documentsRequired: ["ID proof (Aadhaar/PAN/Voter ID)", "Address proof", "Age proof", "Photo"],
+    applicationUrl: "https://aaplesarkar.mahaonline.gov.in/",
+    officialSourceUrl: "https://aaplesarkar.mahaonline.gov.in/",
+    verificationStatus: "government_verified",
+  },
+  {
+    id: "db444444-4444-4444-8444-444444444444",
+    schemeName: "Karnataka Senior Citizen Identity Card",
+    governmentLevel: "state",
+    state: "Karnataka",
+    department: "Dept. for Empowerment of Differently Abled & Senior Citizens, Karnataka",
+    beneficiaryCategory: "Senior citizens (60+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility:
+      "Residents of Karnataka aged 60 and above (domicile verified).",
+    benefits:
+      "Official senior-citizen identity card issued free of charge via the Seva Sindhu portal by the Dept. for Empowerment of Differently Abled & Senior Citizens — serves as age/residence proof to access senior-citizen schemes and concessions. No application fee.",
+    documentsRequired: ["Age proof", "Address proof", "Residence certificate", "Photo"],
+    applicationUrl: "https://sevasindhu.karnataka.gov.in/",
+    officialSourceUrl: "https://sevasindhu.karnataka.gov.in/",
+    verificationStatus: "government_verified",
+  },
 ];
