@@ -26,11 +26,17 @@ export const DL = {
   clientId: process.env.DIGILOCKER_CLIENT_ID ?? "",
   clientSecret: process.env.DIGILOCKER_CLIENT_SECRET ?? "",
   redirectUri: process.env.DIGILOCKER_REDIRECT_URI ?? "",
+  // Optional scope string your partner config requires (e.g. to include eKYC).
+  scope: process.env.DIGILOCKER_SCOPE ?? "",
+  // Per Meripehchaan Authorized Partner API v2.x: authorize is v1, token is v2.
   authorizePath: "/public/oauth2/1/authorize",
-  tokenPath: "/public/oauth2/1/token",
-  ekycPath: "/public/oauth2/3/kyc/aadhaar", // demographic eKYC — VERIFY version
-  issuedPath: "/public/oauth2/2/files/issued", // list of issued docs — VERIFY
-  fileXmlPath: (uri: string) => `/public/oauth2/1/xml/${encodeURIComponent(uri)}`,
+  tokenPath: "/public/oauth2/2/token",
+  // The token response returns basic eKYC (name/dob/gender). Full Aadhaar
+  // demographics (address, masked aadhaar, photo) + issued-doc pulls use the
+  // endpoints below — CONFIRM exact paths/versions in your onboarded docs.
+  ekycPath: "/public/oauth2/3/xml/eaadhaar",
+  issuedPath: "/public/oauth2/2/files/issued",
+  fileXmlPath: (uri: string) => `/public/oauth2/1/file/${encodeURIComponent(uri)}`,
 };
 
 /** True when real partner credentials are present; otherwise we run in mock mode. */
@@ -60,6 +66,7 @@ export function buildAuthorizeUrl(state: string, codeChallenge: string): string 
     code_challenge: codeChallenge,
     code_challenge_method: "S256",
   });
+  if (DL.scope) q.set("scope", DL.scope);
   return `${DL.base}${DL.authorizePath}?${q.toString()}`;
 }
 
