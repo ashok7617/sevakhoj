@@ -387,13 +387,15 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     governmentLevel: "central",
     ministry: "Ministry of Social Justice & Empowerment",
     department: "Dept. of Empowerment of Persons with Disabilities (DEPwD)",
-    beneficiaryCategory: "Persons with disabilities (the disability ID card)",
+    beneficiaryCategory: "Persons with disabilities (disability certificate + national ID card)",
     schemeGroupSlug: "disability",
     eligibility:
-      "Persons with disabilities holding (or eligible for) a disability certificate. Apply online with the certificate / assessment.",
+      "Any person with a specified disability of 40% or more (across the 21 disabilities recognised under the RPwD Act, 2016), certified by a medical authority. This is the single national process for the Disability Certificate + UDID card in every state and UT — apply online, then get assessed at your state's notified government hospital / medical board.",
     benefits:
-      "A single, nationally-valid Unique Disability ID (UDID) card that serves as proof of disability across the country — used to avail government benefits, concessions and scheme entitlements without repeated paperwork.",
-    documentsRequired: ["Disability certificate / assessment", "Aadhaar", "Photo"],
+      "One Disability Certificate and nationally-valid Unique Disability ID (UDID / Swavlamban) card — proof of disability recognised across India, replacing separate state certificates. Used for the 4% PwD reservation in government jobs & education, rail/road travel concessions, disability scholarships and pensions, and scheme entitlements — without repeated paperwork.",
+    documentsRequired: ["Aadhaar", "Recent photo", "Address & age proof", "Existing disability certificate (if any)"],
+    applicationProcess:
+      "Register on the UDID portal (swavlambancard.gov.in) with Aadhaar → fill personal & disability details → the system assigns you to a notified medical authority (government hospital) in your district for assessment → certificate & UDID card issued and downloadable from the portal.",
     applicationUrl: "https://www.swavlambancard.gov.in/",
     officialSourceUrl: "https://www.swavlambancard.gov.in/",
     verificationStatus: "government_verified",
