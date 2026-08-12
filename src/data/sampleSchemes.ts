@@ -325,4 +325,186 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     officialSourceUrl: "https://pmcaresforchildren.in/",
     verificationStatus: "government_verified",
   },
+
+  /* ---- Additional central schemes (needs_verification; confirm details on
+     each official portal). ---- */
+  {
+    id: "c1111111-1111-4111-8111-111111111111",
+    schemeName: "Ayushman Vay Vandana Card (AB PM-JAY for Senior Citizens 70+)",
+    governmentLevel: "central",
+    ministry: "Ministry of Health & Family Welfare",
+    department: "National Health Authority",
+    beneficiaryCategory: "Senior citizens aged 70 and above (the 'senior citizen card')",
+    schemeGroupSlug: "senior_citizens",
+    eligibility:
+      "All senior citizens aged 70 and above are eligible, irrespective of income, on producing Aadhaar-based age proof. Applies whether or not the family is already covered under AB PM-JAY.",
+    benefits:
+      "The Ayushman Vay Vandana Card gives free health cover up to ₹5 lakh/year for 70+ seniors — a dedicated top-up for those in existing PM-JAY families, or ₹5 lakh on a family basis otherwise. Covers ~2,000 procedures, cashless at empanelled hospitals, with pre-existing conditions from day one.",
+    documentsRequired: ["Aadhaar", "Age proof (70+)"],
+    applicationProcess:
+      "Enrol for the Ayushman Vay Vandana Card on the PM-JAY / Ayushman app or at an empanelled hospital / Common Service Centre with your Aadhaar.",
+    applicationUrl: "https://pmjay.gov.in/",
+    officialSourceUrl: "https://pmjay.gov.in/",
+  },
+  {
+    id: "c2222222-2222-4222-8222-222222222222",
+    schemeName: "Senior Citizens' Savings Scheme (SCSS)",
+    governmentLevel: "central",
+    ministry: "Ministry of Finance",
+    department: "India Post / authorised banks",
+    beneficiaryCategory: "Senior citizens (savings & regular income)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility:
+      "Individuals aged 60 and above; also 55–60 for those who retired under superannuation/VRS (and 50+ for certain defence retirees), subject to conditions. Verify on the portal.",
+    benefits:
+      "A government-backed 5-year savings scheme paying quarterly interest (rate revised each quarter), with a maximum deposit of ₹30 lakh and tax benefits under Section 80C.",
+    documentsRequired: ["Age proof", "PAN", "Aadhaar", "Passport-size photo"],
+    applicationUrl: "https://www.indiapost.gov.in/",
+    officialSourceUrl: "https://www.indiapost.gov.in/",
+  },
+  {
+    id: "c3333333-3333-4333-8333-333333333333",
+    schemeName: "National Programme for Health Care of the Elderly (NPHCE)",
+    governmentLevel: "central",
+    ministry: "Ministry of Health & Family Welfare",
+    department: "National Programme for Health Care of the Elderly",
+    beneficiaryCategory: "Senior citizens (geriatric health care)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility: "Senior citizens seeking geriatric health services at government facilities.",
+    benefits:
+      "Dedicated geriatric health services — geriatric OPD/wards at district hospitals and medical colleges, and elderly-care services down to sub-centre level, largely free at government facilities.",
+    documentsRequired: [],
+    applicationUrl: "https://mohfw.gov.in/",
+    officialSourceUrl: "https://mohfw.gov.in/",
+  },
+  {
+    id: "c4444444-4444-4444-8444-444444444444",
+    schemeName: "Unique Disability ID (UDID) Card",
+    governmentLevel: "central",
+    ministry: "Ministry of Social Justice & Empowerment",
+    department: "Dept. of Empowerment of Persons with Disabilities (DEPwD)",
+    beneficiaryCategory: "Persons with disabilities (the disability ID card)",
+    schemeGroupSlug: "disability",
+    eligibility:
+      "Persons with disabilities holding (or eligible for) a disability certificate. Apply online with the certificate / assessment.",
+    benefits:
+      "A single, nationally-valid Unique Disability ID (UDID) card that serves as proof of disability across the country — used to avail government benefits, concessions and scheme entitlements without repeated paperwork.",
+    documentsRequired: ["Disability certificate / assessment", "Aadhaar", "Photo"],
+    applicationUrl: "https://www.swavlambancard.gov.in/",
+    officialSourceUrl: "https://www.swavlambancard.gov.in/",
+  },
+  {
+    id: "c5555555-5555-4555-8555-555555555555",
+    schemeName: "Deendayal Disabled Rehabilitation Scheme (DDRS)",
+    governmentLevel: "central",
+    ministry: "Ministry of Social Justice & Empowerment",
+    department: "Dept. of Empowerment of Persons with Disabilities (DEPwD)",
+    beneficiaryCategory: "Persons with disabilities (via registered NGOs)",
+    schemeGroupSlug: "disability",
+    eligibility:
+      "Grant-in-aid to registered voluntary organisations / NGOs running services for persons with disabilities. Individuals access services through these organisations.",
+    benefits:
+      "Funds NGO-run services for persons with disabilities — special schools, early-intervention, community-based rehabilitation, vocational training and more.",
+    documentsRequired: [],
+    applicationUrl: "https://disabilityaffairs.gov.in/",
+    officialSourceUrl: "https://disabilityaffairs.gov.in/",
+  },
+  {
+    id: "c6666666-6666-4666-8666-666666666666",
+    schemeName: "Swadhar Greh",
+    governmentLevel: "central",
+    ministry: "Ministry of Women & Child Development",
+    department: "Mission Shakti (Sambal)",
+    beneficiaryCategory: "Women in difficult circumstances",
+    schemeGroupSlug: "women",
+    eligibility:
+      "Women without social or economic support — destitute, deserted, widows, survivors of violence or trafficking, women released from prison, etc.",
+    benefits:
+      "Temporary residential shelter with food, clothing, medical care, counselling, legal aid, and rehabilitation/skilling to help women rebuild their lives.",
+    documentsRequired: [],
+    applicationUrl: "https://wcd.gov.in/",
+    officialSourceUrl: "https://wcd.gov.in/",
+    sourceKey: "vatsalya",
+  },
+  {
+    id: "c7777777-7777-4777-8777-777777777777",
+    schemeName: "Beti Bachao Beti Padhao (BBBP)",
+    governmentLevel: "central",
+    ministry: "Ministry of Women & Child Development",
+    department: "Mission Shakti",
+    beneficiaryCategory: "The girl child (survival, protection, education)",
+    schemeGroupSlug: "women",
+    eligibility:
+      "A national awareness & multi-sectoral programme (not a cash transfer) for the girl child, implemented across districts.",
+    benefits:
+      "Action to improve the child sex ratio and promote the survival, protection and education of girls — advocacy, awareness, and convergence with schooling and health services.",
+    documentsRequired: [],
+    applicationUrl: "https://wcd.gov.in/",
+    officialSourceUrl: "https://wcd.gov.in/",
+    sourceKey: "vatsalya",
+  },
+  {
+    id: "c8888888-8888-4888-8888-888888888888",
+    schemeName: "Sukanya Samriddhi Yojana (SSY)",
+    governmentLevel: "central",
+    ministry: "Ministry of Finance",
+    department: "India Post / authorised banks",
+    beneficiaryCategory: "Girl child (savings for education & future)",
+    schemeGroupSlug: "women",
+    eligibility:
+      "An account for a girl child below 10 years, opened by a parent/guardian (generally up to two girls per family, with exceptions). Verify current rules on the portal.",
+    benefits:
+      "A small-savings account with a high government-set interest rate (revised quarterly) and tax benefits; matures for the girl's higher education or marriage.",
+    documentsRequired: ["Girl's birth certificate", "Guardian ID & address proof"],
+    applicationUrl: "https://www.indiapost.gov.in/",
+    officialSourceUrl: "https://www.indiapost.gov.in/",
+  },
+  {
+    id: "c9999999-9999-4999-8999-999999999999",
+    schemeName: "National Creche Scheme (Palna)",
+    governmentLevel: "central",
+    ministry: "Ministry of Women & Child Development",
+    department: "Mission Shakti (Samarthya) — Palna",
+    beneficiaryCategory: "Children (6 months–6 years) of working mothers",
+    schemeGroupSlug: "children",
+    eligibility: "Children aged 6 months to 6 years whose mothers are working.",
+    benefits:
+      "Day-care crèche facilities providing a safe environment, supplementary nutrition, growth monitoring, health check-ups and early stimulation, so mothers can work.",
+    documentsRequired: [],
+    applicationUrl: "https://wcd.gov.in/",
+    officialSourceUrl: "https://wcd.gov.in/",
+    sourceKey: "vatsalya",
+  },
+  {
+    id: "ca111111-1111-4111-8111-111111111111",
+    schemeName: "POSHAN Abhiyaan (National Nutrition Mission)",
+    governmentLevel: "central",
+    ministry: "Ministry of Women & Child Development",
+    department: "Mission Poshan 2.0",
+    beneficiaryCategory: "Children under 6, pregnant & lactating women, adolescent girls",
+    schemeGroupSlug: "children",
+    eligibility:
+      "Children under 6, pregnant women and lactating mothers (and adolescent girls via convergence) — delivered through Anganwadi centres.",
+    benefits:
+      "Improved nutrition — supplementary nutrition, growth monitoring, counselling and community mobilisation through Anganwadi services to reduce stunting, undernutrition and anaemia.",
+    documentsRequired: [],
+    applicationUrl: "https://poshanabhiyaan.gov.in/",
+    officialSourceUrl: "https://poshanabhiyaan.gov.in/",
+  },
+  {
+    id: "ca222222-2222-4222-8222-222222222222",
+    schemeName: "Atal Pension Yojana (APY)",
+    governmentLevel: "central",
+    ministry: "Ministry of Finance",
+    department: "Pension Fund Regulatory & Development Authority (PFRDA)",
+    beneficiaryCategory: "Unorganised-sector workers (guaranteed pension)",
+    schemeGroupSlug: "low_income",
+    eligibility:
+      "Indian citizens aged 18–40 with a bank / post-office account (aimed at the unorganised sector; income-tax payers are excluded, per current norms).",
+    benefits:
+      "A guaranteed minimum monthly pension of ₹1,000 to ₹5,000 from age 60, based on the chosen amount and contributions, with the pension continuing to the spouse.",
+    documentsRequired: ["Aadhaar", "Bank / post-office account", "Mobile number"],
+    applicationUrl: "https://www.pfrda.org.in/",
+    officialSourceUrl: "https://www.pfrda.org.in/",
+  },
 ];
