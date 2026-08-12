@@ -38,6 +38,11 @@ export function isConfigured(): boolean {
   return Boolean(DL.clientId && DL.clientSecret && DL.redirectUri);
 }
 
+/** Whitelist the post-pull return path to an /apply/<slug> page (avoids open redirects). */
+export function safeApplyPath(n?: string | null): string {
+  return n && /^\/apply\/[a-z0-9-]+$/.test(n) ? n : "/apply/up-bocw";
+}
+
 /* ------------------------------------------------------------- PKCE + auth */
 
 export function makePkce() {

@@ -15,9 +15,9 @@ const PKCE = "dl_pkce";
 const PROFILE = "dl_profile";
 const secure = process.env.NODE_ENV === "production";
 
-export async function savePkce(state: string, verifier: string) {
+export async function savePkce(state: string, verifier: string, next: string) {
   const c = await cookies();
-  c.set(PKCE, JSON.stringify({ state, verifier }), {
+  c.set(PKCE, JSON.stringify({ state, verifier, next }), {
     httpOnly: true,
     sameSite: "lax",
     secure,
@@ -26,15 +26,15 @@ export async function savePkce(state: string, verifier: string) {
   });
 }
 
-/** One-time read: validates state, returns the verifier, clears the cookie. */
-export async function takePkce(state: string): Promise<string | null> {
+/** One-time read: validates state, returns the verifier + return path, clears the cookie. */
+export async function takePkce(state: string): Promise<{ verifier: string; next: string } | null> {
   const c = await cookies();
   const raw = c.get(PKCE)?.value;
   c.delete(PKCE);
   if (!raw) return null;
   try {
-    const o = JSON.parse(raw) as { state: string; verifier: string };
-    return o.state === state ? o.verifier : null;
+    const o = JSON.parse(raw) as { state: string; verifier: string; next: string };
+    return o.state === state ? { verifier: o.verifier, next: o.next } : null;
   } catch {
     return null;
   }
