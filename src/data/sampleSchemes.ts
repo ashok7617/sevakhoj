@@ -536,10 +536,11 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     eligibility:
       "Women resident in Maharashtra aged 21–65 from eligible families (family income up to ₹2.5 lakh/year; not income-tax payers, per scheme norms).",
     benefits:
-      "Monthly financial assistance to eligible women (₹1,500/month under the scheme — confirm the current amount on the official portal).",
+      "₹1,500 per month to eligible women, paid directly to an Aadhaar-linked bank account (DBT).",
     documentsRequired: ["Aadhaar", "Domicile & age proof", "Income/ration details", "Bank account (DBT)"],
     applicationUrl: "https://ladakibahin.maharashtra.gov.in/",
     officialSourceUrl: "https://ladakibahin.maharashtra.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "d2222222-2222-4222-8222-222222222222",
@@ -550,11 +551,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Destitute persons — disabled, orphans, destitute women/widows",
     schemeGroupSlug: "low_income",
     eligibility:
-      "Destitute persons of Maharashtra — including persons with disability, orphans and destitute women/widows — with family income below the notified limit.",
-    benefits: "Monthly state financial assistance (pension) to destitute persons.",
-    documentsRequired: ["Age proof", "Income certificate", "Domicile", "Bank details"],
+      "Destitute persons of Maharashtra aged 18–65 — including persons with disability (40%+), orphans, destitute widows and the seriously ill — on the BPL list or with family income up to ₹21,000/year.",
+    benefits: "₹1,500 per month state financial assistance (pension) to eligible destitute persons, via DBT.",
+    documentsRequired: ["Age proof", "Income/BPL certificate", "Domicile", "Bank details"],
     applicationUrl: "https://aaplesarkar.mahaonline.gov.in/",
-    officialSourceUrl: "https://sjsa.maharashtra.gov.in/",
+    officialSourceUrl: "https://sjsa.maharashtra.gov.in/en/scheme/sanjay-gandhi-niradhar-anudan-yojana/",
+    verificationStatus: "government_verified",
   },
   {
     id: "d3333333-3333-4333-8333-333333333333",
@@ -565,11 +567,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Woman head of an eligible family",
     schemeGroupSlug: "women",
     eligibility:
-      "Woman head of an eligible family in Tamil Nadu, subject to income and other criteria notified by the state.",
-    benefits: "₹1,000 per month to the eligible woman head of family (basic income support).",
+      "Woman head of an eligible family in Tamil Nadu, aged 21 and above, subject to income and other criteria notified by the state (one eligible woman per family).",
+    benefits: "₹1,000 per month to the eligible woman head of family, via DBT (basic income support).",
     documentsRequired: ["Aadhaar", "Ration card", "Bank account (DBT)"],
     applicationUrl: "https://kmut.tn.gov.in/",
     officialSourceUrl: "https://kmut.tn.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "d4444444-4444-4444-8444-444444444444",
@@ -580,11 +583,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Woman head of household (eligible ration-card families)",
     schemeGroupSlug: "women",
     eligibility:
-      "Woman named as head of the household in an eligible (BPL/APL/Antyodaya) ration card in Karnataka, subject to scheme conditions.",
-    benefits: "₹2,000 per month to the woman head of household (via DBT).",
+      "Woman named as head of the household on an eligible Antyodaya/BPL/APL ration card in Karnataka (one woman per household; income-tax payers and government employees excluded).",
+    benefits: "₹2,000 per month to the woman head of household, via DBT.",
     documentsRequired: ["Aadhaar", "Ration card", "Bank account"],
-    applicationUrl: "https://sevasindhugs.karnataka.gov.in/",
-    officialSourceUrl: "https://sevasindhugs.karnataka.gov.in/",
+    applicationUrl: "https://sevasindhuservices.karnataka.gov.in/",
+    officialSourceUrl: "https://sevasindhuservices.karnataka.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "d5555555-5555-4555-8555-555555555555",
@@ -595,11 +599,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Senior citizens (65+) in low-income households",
     schemeGroupSlug: "senior_citizens",
     eligibility:
-      "Senior citizens aged 65 and above in Karnataka with low income (small/marginal farmers, agricultural labourers, unorganised workers), per scheme criteria.",
-    benefits: "Monthly old-age pension to eligible seniors (confirm the current amount on the portal).",
+      "Senior citizens aged 65 and above in Karnataka with low income (annual income within limits; bank deposits not exceeding the notified cap) — small/marginal farmers, agricultural labourers and unorganised workers, per scheme criteria.",
+    benefits: "₹1,200 per month old-age pension to eligible seniors, via DBT (confirm the current amount on the portal).",
     documentsRequired: ["Age proof", "Income certificate", "Aadhaar", "Bank details"],
-    applicationUrl: "https://ssp.karnataka.gov.in/",
+    applicationUrl: "https://sevasindhu.karnataka.gov.in/",
     officialSourceUrl: "https://ssp.karnataka.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "d6666666-6666-4666-8666-666666666666",
@@ -611,10 +616,11 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     schemeGroupSlug: "senior_citizens",
     eligibility:
       "Eligible Kerala residents under the state's welfare pension categories — old age, widow/single women, persons with disability, and agricultural workers — meeting income criteria.",
-    benefits: "Monthly welfare pension (₹1,600/month under the scheme) via DBT.",
+    benefits: "₹1,600 per month welfare pension (uniform across all categories) via DBT.",
     documentsRequired: ["Age/category proof", "Income certificate", "Aadhaar", "Bank details"],
     applicationUrl: "https://welfarepension.lsgkerala.gov.in/",
     officialSourceUrl: "https://welfarepension.lsgkerala.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "d7777777-7777-4777-8777-777777777777",
@@ -625,12 +631,13 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Women heads of household (25–60)",
     schemeGroupSlug: "women",
     eligibility:
-      "Women aged 25–60 named as head of household in West Bengal (enrolled via Duare Sarkar), per scheme conditions.",
+      "Women aged 25–60 named as head of household in West Bengal (enrolled via Duare Sarkar); salaried or pensioned applicants are not eligible.",
     benefits:
-      "Monthly assistance — ₹1,000 for general-category women and ₹1,200 for SC/ST women (confirm current amount on the portal).",
+      "Monthly assistance — ₹1,500 for general-category women and ₹1,700 for SC/ST women (amounts hiked in 2025), via DBT.",
     documentsRequired: ["Aadhaar", "Swasthya Sathi card", "Bank account"],
     applicationUrl: "https://socialsecurity.wb.gov.in/",
     officialSourceUrl: "https://socialsecurity.wb.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "d8888888-8888-4888-8888-888888888888",
@@ -641,11 +648,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Senior citizens (SC — Taposili Bandhu; ST — Jai Johar)",
     schemeGroupSlug: "senior_citizens",
     eligibility:
-      "Eligible senior citizens of West Bengal — Taposili Bandhu (SC) and Jai Johar (ST) — aged 60 and above, per scheme criteria.",
-    benefits: "Monthly old-age pension via DBT (confirm the current amount on the portal).",
+      "Senior citizens of West Bengal aged 60 and above from BPL households — Taposili Bandhu (SC) and Jai Johar (ST), with a valid caste certificate; not drawing another government pension.",
+    benefits: "₹1,000 per month old-age pension via DBT.",
     documentsRequired: ["Age proof", "Caste certificate", "Aadhaar", "Bank details"],
     applicationUrl: "https://jaibangla.wb.gov.in/",
     officialSourceUrl: "https://jaibangla.wb.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "d9999999-9999-4999-8999-999999999999",
@@ -656,11 +664,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Women (eligible age & income)",
     schemeGroupSlug: "women",
     eligibility:
-      "Women resident in Madhya Pradesh meeting the scheme's age and income criteria (generally married/widowed/divorced/abandoned women; family not income-tax payers).",
-    benefits: "Monthly financial assistance to eligible women (₹1,250/month under the scheme — confirm current amount on the portal).",
+      "Married/widowed/divorced/abandoned women aged 21–60 resident in Madhya Pradesh, with annual family income below ₹2.5 lakh (family not income-tax payers; no member an MP/MLA; no four-wheeler or 5+ acres).",
+    benefits: "Monthly financial assistance to eligible women — ₹1,500/month (raised from ₹1,250), via DBT.",
     documentsRequired: ["Aadhaar", "Samagra ID", "Bank account (DBT)"],
     applicationUrl: "https://cmladlibahna.mp.gov.in/",
     officialSourceUrl: "https://cmladlibahna.mp.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "da111111-1111-4111-8111-111111111111",
@@ -672,10 +681,11 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     schemeGroupSlug: "senior_citizens",
     eligibility:
       "Bihar residents aged 60 and above (irrespective of income, per scheme norms), not receiving another government pension.",
-    benefits: "Monthly old-age pension (₹400/month; higher for 80+, per scheme) via DBT.",
+    benefits: "Monthly old-age pension — ₹400/month for ages 60–79 and ₹500/month for 80 and above — via DBT.",
     documentsRequired: ["Age proof", "Aadhaar", "Bank details"],
     applicationUrl: "https://www.sspmis.bihar.gov.in/",
     officialSourceUrl: "https://www.sspmis.bihar.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "da222222-2222-4222-8222-222222222222",
@@ -686,11 +696,13 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Old-age, widow & persons-with-disability pensioners",
     schemeGroupSlug: "senior_citizens",
     eligibility:
-      "Eligible Odisha residents — senior citizens (60+), widows, and persons with disability — meeting the income criteria under the scheme.",
-    benefits: "Monthly state pension via DBT (confirm the current amount on the portal).",
-    documentsRequired: ["Age/category proof", "Income certificate", "Aadhaar", "Bank details"],
-    applicationUrl: "https://ssepd.gov.in/",
-    officialSourceUrl: "https://ssepd.gov.in/",
+      "Odisha residents (BPL or annual income up to ₹24,000) not drawing another government pension — old age (60+), widows (40+), persons with 40%+ disability, unmarried women (30+), leprosy-cured, HIV/AIDS patients and PTG members.",
+    benefits:
+      "Monthly state pension via DBT — enhanced to ₹3,000/month (₹3,500 for ages 80+ or 80%+ disability) under the Mukhyamantri Sahayata top-up.",
+    documentsRequired: ["Age/category proof", "Income/BPL certificate", "Aadhaar", "Bank details"],
+    applicationUrl: "https://ssepd.odisha.gov.in/",
+    officialSourceUrl: "https://ssepd.odisha.gov.in/schemes-programmes/schemes/madhu-babu-pension-yojna",
+    verificationStatus: "government_verified",
   },
   {
     id: "da333333-3333-4333-8333-333333333333",
@@ -703,10 +715,11 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     eligibility:
       "Women aged 21–60 in Odisha from eligible families (not income-tax payers; excludes those getting ₹1,500+/month under another government scheme, per norms).",
     benefits:
-      "₹10,000 per year (two instalments of ₹5,000) to eligible women, over the scheme period, via DBT.",
+      "₹10,000 per year — two instalments of ₹5,000 (Rakhi Purnima and International Women's Day) — for five years (₹50,000 total), via DBT.",
     documentsRequired: ["Aadhaar", "Ration/eligibility proof", "Bank account"],
     applicationUrl: "https://subhadra.odisha.gov.in/",
     officialSourceUrl: "https://subhadra.odisha.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "da444444-4444-4444-8444-444444444444",
@@ -719,10 +732,11 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     eligibility:
       "Orphaned or vulnerable children (e.g. of deceased/imprisoned parents, destitute, of widowed/divorced mothers, etc.) cared for by a relative or guardian ('palanhar') in Rajasthan.",
     benefits:
-      "Monthly financial support to the palanhar for the child's upbringing and education, plus an annual grant — so the child can grow within a family rather than an institution.",
-    documentsRequired: ["Child & guardian Aadhaar", "Eligibility proof", "School enrolment", "Bank details"],
+      "Monthly support to the palanhar — ₹1,500/month for a child up to 5 years and ₹2,500/month for ages 6–18 — plus a ₹2,000 annual grant for uniforms, books and stationery (guardian's annual income must be within ₹1.2 lakh). Keeps the child within a family rather than an institution.",
+    documentsRequired: ["Child & guardian Aadhaar", "Eligibility proof", "Anganwadi/school enrolment", "Bank details"],
     applicationUrl: "https://sso.rajasthan.gov.in/",
     officialSourceUrl: "https://jansoochna.rajasthan.gov.in/",
+    verificationStatus: "government_verified",
   },
   {
     id: "da555555-5555-4555-8555-555555555555",
@@ -733,11 +747,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Senior citizens (60+)",
     schemeGroupSlug: "senior_citizens",
     eligibility:
-      "Haryana residents aged 60 and above meeting the income criteria notified under the scheme.",
-    benefits: "Monthly old-age allowance (₹3,000/month under the scheme — confirm the current amount on the portal).",
+      "Haryana residents aged 60 and above whose combined income with their spouse from all sources does not exceed ₹3 lakh/year.",
+    benefits: "₹3,200 per month old-age allowance (raised from ₹3,000 w.e.f. Nov 2025), via DBT.",
     documentsRequired: ["Age proof", "Income/Parivar Pehchan details", "Aadhaar", "Bank details"],
-    applicationUrl: "https://pension.socialjusticehry.gov.in/",
-    officialSourceUrl: "https://pension.socialjusticehry.gov.in/",
+    applicationUrl: "https://socialjusticehry.gov.in/",
+    officialSourceUrl: "https://socialjusticehry.gov.in/old-age-samman-allowance-scheme/",
+    verificationStatus: "government_verified",
   },
   {
     id: "da666666-6666-4666-8666-666666666666",
@@ -748,10 +763,12 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     beneficiaryCategory: "Senior citizens (60+)",
     schemeGroupSlug: "senior_citizens",
     eligibility:
-      "Delhi residents aged 60 and above meeting the residence and income criteria notified by the government.",
-    benefits: "Monthly old-age pension via DBT (confirm the current amount and slabs on the portal).",
+      "Delhi residents aged 60 and above who have lived in Delhi for at least 5 years, with annual family income below ₹1 lakh.",
+    benefits:
+      "Monthly old-age pension via DBT — ₹2,500/month for ages 60–69 and ₹3,000/month for 70 and above (with a top-up for SC/ST/minority beneficiaries).",
     documentsRequired: ["Age proof", "Delhi residence proof", "Income details", "Aadhaar", "Bank details"],
     applicationUrl: "https://edistrict.delhigovt.nic.in/",
-    officialSourceUrl: "https://socialwelfare.delhi.gov.in/",
+    officialSourceUrl: "https://socialwelfare.delhi.gov.in/social/financials-assistance-schemes",
+    verificationStatus: "government_verified",
   },
 ];
