@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Profile } from "@/lib/digilocker";
 import {
   type FieldCfg,
-  DigiLockerCard,
+  ProfileBar,
   ProfileEditor,
   PrintStyle,
   Row,
@@ -59,25 +59,24 @@ const ERR: Record<string, string> = {
   access_denied: "You declined the DigiLocker consent.",
 };
 
-export function MhBocwForm({ profile, configured, connectedVia, error }: { profile: Profile | null; configured: boolean; connectedVia?: string; error?: string }) {
-  const connected = Boolean(profile);
+export function MhBocwForm({ profile, configured, error }: { profile: Profile | null; configured: boolean; connectedVia?: string; error?: string }) {
+  const dlVerified = Boolean(profile) && Object.values(profile?.source ?? {}).some((s) => /DigiLocker/i.test(s));
   const [model, setModel] = useState<Record<string, string>>(() => ({ ...SELF_DEFAULTS, state: "Maharashtra", ...(profile?.fields ?? {}) }));
   const set = (k: string, v: string) => setModel((m) => ({ ...m, [k]: v }));
   const V = (k: string) => model[k] || "";
   const age = ageOf(V("dob"));
   const daysOk = parseInt(V("days"), 10) >= 90;
-  const dlCount = FIELDS.filter((f) => f.src === "dl" && V(f.key)).length;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <PrintStyle id="mh-paper" />
       <p className="text-xs font-mono uppercase tracking-widest text-emerald-700">SevaKhoj · Apply</p>
       <h1 className="mt-1 text-2xl font-bold text-slate-900">Maharashtra Construction Worker — <span className="font-serif">बांधकाम कामगार नोंदणी</span> (MahaBOCW)</h1>
-      <p className="mt-1 max-w-2xl text-sm text-slate-600">Same DigiLocker pull, a different state&apos;s form. Connect once and your verified identity flows into MahaBOCW too; add the rest and submit on mahabocw.in.</p>
+      <p className="mt-1 max-w-2xl text-sm text-slate-600">Same saved profile, a different state&apos;s form. Your details flow into MahaBOCW too; review the generated form and submit on mahabocw.in.</p>
 
       {error && <div className="mt-4 rounded-lg border border-rose-200 bg-rose-50 px-4 py-2 text-sm text-rose-800">{ERR[error] ?? `Error: ${error}`}</div>}
 
-      <DigiLockerCard connected={connected} configured={configured} connectedVia={connectedVia} applyPath={APPLY_PATH} dlCount={dlCount} />
+      <ProfileBar configured={configured} dlVerified={dlVerified} applyPath={APPLY_PATH} getFields={() => { const { state, ...rest } = model; return rest; }} />
 
       <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)]">
         <div className="no-print">
@@ -85,8 +84,8 @@ export function MhBocwForm({ profile, configured, connectedVia, error }: { profi
             <span className="font-mono text-[0.62rem] uppercase tracking-widest text-emerald-700">Collected once</span>
             <h2 className="text-base font-semibold text-slate-900">Universal profile</h2>
           </div>
-          <ProfileEditor fields={FIELDS} value={V} connected={connected} onSet={set} />
-          <p className="mt-3 flex gap-1.5 text-xs text-slate-500"><span>ⓘ</span><span>The DigiLocker fields are the <b>same profile</b> that filled the UP form — one pull, many forms. Maharashtra uses <b>Taluka</b> (from Aadhaar sub-district) and no Mandal/Block.</span></p>
+          <ProfileEditor fields={FIELDS} value={V} dlVerified={dlVerified} onSet={set} />
+          <p className="mt-3 flex gap-1.5 text-xs text-slate-500"><span>ⓘ</span><span>The <b>same saved profile</b> that filled the UP form also fills this one — enter once, apply many. Maharashtra uses <b>Taluka</b> and no Mandal/Block.</span></p>
         </div>
 
         <div>
@@ -129,7 +128,7 @@ export function MhBocwForm({ profile, configured, connectedVia, error }: { profi
                 </div>
                 <Row label="9. शिधापत्रिका / Ration card" value={V("rationCard")} />
               </div>
-              <div className="grid h-[104px] w-[84px] place-items-center border border-slate-400 text-center text-[8.5px] text-slate-400">फोटो<br />Photo<br />{connected ? "✓ eKYC" : "(eKYC)"}</div>
+              <div className="grid h-[104px] w-[84px] place-items-center border border-slate-400 text-center text-[8.5px] text-slate-400">फोटो<br />Photo<br />{dlVerified ? "✓ eKYC" : "(attach)"}</div>
             </div>
 
             <Sec>ब · कायमचा पत्ता / Permanent address</Sec>

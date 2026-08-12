@@ -2,11 +2,15 @@
 
 /**
  * Shared engine for the BOCW scheme-application pattern. Each state supplies a
- * field list + its own paper-form layout; everything else (DigiLocker connect,
- * profile editor, eligibility, print, form primitives) lives here.
+ * field list + its own paper-form layout; everything else (profile bar, editor,
+ * eligibility, print, form primitives) lives here.
+ *
+ * Primary flow is MANUAL: the citizen types their universal profile once, it's
+ * saved (server cookie) and reused across every state's form. DigiLocker
+ * auto-fill is optional and only surfaces when partner creds are configured.
  */
 
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 
 export type Src = "dl" | "self" | "pd" | "otp";
 export type FieldCfg = {
@@ -25,7 +29,7 @@ export const SRC_STYLE: Record<Src, string> = {
   pd: "bg-emerald-100 text-emerald-700 ring-emerald-600/20",
   otp: "bg-emerald-100 text-emerald-700 ring-emerald-600/20",
 };
-export const SRC_LABEL: Record<Src, string> = { dl: "DigiLocker", self: "self", pd: "penny-drop", otp: "OTP" };
+export const SRC_LABEL: Record<Src, string> = { dl: "you enter", self: "you enter", pd: "you enter", otp: "you enter" };
 
 /* ---- date + eligibility (shared BOCW rule: age 18–60, ≥90 days in 12 mo.) -- */
 
@@ -49,7 +53,7 @@ export function fmtDob(dob: string): string {
 export function eligibility(dob: string, daysStr: string): { level: "wait" | "yes" | "no"; text: string } {
   const age = ageOf(dob);
   const days = parseInt(daysStr, 10);
-  if (!dob) return { level: "wait", text: "Connect DigiLocker to pull age, then the eligibility check runs." };
+  if (!dob) return { level: "wait", text: "Enter date of birth and work days to check eligibility (age 18–60, ≥90 days)." };
   const ageOk = age !== null && age >= 18 && age <= 60;
   const daysOk = !isNaN(days) && days >= 90;
   if (ageOk && daysOk)
@@ -70,51 +74,75 @@ export function PrintStyle({ id }: { id: string }) {
   );
 }
 
-/* --------------------------------------------------------- DigiLocker card */
+/* --------------------------------------------------------- save + profile bar */
 
-export function DigiLockerCard({
-  connected,
+async function postProfile(fields: Record<string, string>): Promise<boolean> {
+  try {
+    const r = await fetch("/api/profile", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ fields }),
+    });
+    return r.ok;
+  } catch {
+    return false;
+  }
+}
+
+export function ProfileBar({
   configured,
-  connectedVia,
+  dlVerified,
   applyPath,
-  dlCount,
+  getFields,
 }: {
-  connected: boolean;
   configured: boolean;
-  connectedVia?: string;
+  dlVerified: boolean;
   applyPath: string;
-  dlCount: number;
+  getFields: () => Record<string, string>;
 }) {
-  return (
-    <div
-      className={`mt-5 flex flex-wrap items-center gap-3 rounded-xl border px-4 py-3 no-print ${
-        connected ? "border-emerald-300 bg-emerald-50" : "border-sky-300 bg-sky-50"
-      }`}
-    >
-      <div className={`grid h-9 w-9 flex-none place-items-center rounded-lg text-lg text-white ${connected ? "bg-emerald-600" : "bg-sky-700"}`}>
-        {connected ? "✓" : "🔗"}
-      </div>
-      <div className="min-w-[180px] flex-1">
-        <div className="text-sm font-semibold text-slate-800">
-          {connected ? `DigiLocker connected — ${dlCount} fields pulled` : "Connect DigiLocker to auto-fill verified details"}
+  const [st, setSt] = useState<"idle" | "saving" | "saved" | "error">("idle");
+
+  if (dlVerified) {
+    return (
+      <div className="mt-5 flex flex-wrap items-center gap-3 rounded-xl border border-emerald-300 bg-emerald-50 px-4 py-3 no-print">
+        <div className="grid h-9 w-9 flex-none place-items-center rounded-lg bg-emerald-600 text-lg text-white">✓</div>
+        <div className="min-w-[180px] flex-1">
+          <div className="text-sm font-semibold text-slate-800">Verified via DigiLocker</div>
+          <div className="text-xs text-slate-600">Identity &amp; address pulled from your DigiLocker.</div>
         </div>
-        <div className="text-xs text-slate-600">
-          {connected
-            ? `Aadhaar eKYC + issued certificates${connectedVia === "mock" ? " · sandbox test identity" : ""}`
-            : configured
-              ? "You'll sign in to your own DigiLocker and consent"
-              : "Sandbox mock mode — no partner credentials configured yet"}
-        </div>
-      </div>
-      {connected ? (
         <a href={`/api/digilocker/disconnect?next=${encodeURIComponent(applyPath)}`} className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">
-          Disconnect
+          Clear
         </a>
-      ) : (
-        <a href={`/api/digilocker/connect?next=${encodeURIComponent(applyPath)}`} className="rounded-lg bg-sky-700 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-800">
-          Connect DigiLocker
+      </div>
+    );
+  }
+
+  async function save() {
+    setSt("saving");
+    const ok = await postProfile(getFields());
+    setSt(ok ? "saved" : "error");
+    if (ok) setTimeout(() => setSt("idle"), 2500);
+  }
+
+  return (
+    <div className="mt-5 flex flex-wrap items-center gap-3 rounded-xl border border-slate-300 bg-slate-50 px-4 py-3 no-print">
+      <div className="grid h-9 w-9 flex-none place-items-center rounded-lg bg-slate-700 text-lg text-white">📝</div>
+      <div className="min-w-[180px] flex-1">
+        <div className="text-sm font-semibold text-slate-800">Enter your details once</div>
+        <div className="text-xs text-slate-600">Saved and reused across every scheme form — you won&apos;t re-type them.</div>
+      </div>
+      <button
+        onClick={save}
+        disabled={st === "saving"}
+        className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-60"
+      >
+        {st === "saving" ? "Saving…" : st === "saved" ? "Saved ✓" : st === "error" ? "Retry save" : "Save my details"}
+      </button>
+      {configured ? (
+        <a href={`/api/digilocker/connect?next=${encodeURIComponent(applyPath)}`} className="text-xs text-sky-700 hover:underline">
+          or auto-fill via DigiLocker
         </a>
-      )}
+      ) : null}
     </div>
   );
 }
@@ -124,12 +152,12 @@ export function DigiLockerCard({
 export function ProfileEditor({
   fields,
   value,
-  connected,
+  dlVerified,
   onSet,
 }: {
   fields: FieldCfg[];
   value: (k: string) => string;
-  connected: boolean;
+  dlVerified: boolean;
   onSet: (k: string, v: string) => void;
 }) {
   const groups = [...new Set(fields.map((f) => f.group))];
@@ -140,16 +168,14 @@ export function ProfileEditor({
           <div className="mb-2 font-mono text-[0.62rem] uppercase tracking-widest text-slate-400">{g}</div>
           <div className="grid grid-cols-2 gap-x-3 gap-y-2.5">
             {fields.filter((f) => f.group === g).map((f) => {
-              const isDL = f.src === "dl";
-              const locked = isDL && !connected;
-              const readOnly = isDL && connected;
+              const readOnly = f.src === "dl" && dlVerified; // locked only when DigiLocker-verified
+              const tag = readOnly ? "DigiLocker ✓" : "you enter";
+              const tagCls = readOnly ? SRC_STYLE.dl : SRC_STYLE.self;
               return (
                 <div key={f.key} className={f.wide ? "col-span-2" : ""}>
                   <label className="mb-0.5 flex items-center gap-1.5 text-[0.7rem] text-slate-500">
                     <span className="flex-1 leading-tight">{f.label}</span>
-                    <span className={`rounded px-1 py-px font-mono text-[0.55rem] ring-1 ring-inset ${locked ? "bg-slate-50 text-slate-400 ring-slate-300" : SRC_STYLE[f.src]}`}>
-                      {locked ? "🔒 DigiLocker" : SRC_LABEL[f.src]}
-                    </span>
+                    <span className={`rounded px-1 py-px font-mono text-[0.55rem] ring-1 ring-inset ${tagCls}`}>{tag}</span>
                   </label>
                   {f.type === "select" && !readOnly ? (
                     <select
@@ -165,16 +191,10 @@ export function ProfileEditor({
                     <input
                       value={value(f.key)}
                       readOnly={readOnly}
-                      disabled={locked}
-                      placeholder={locked ? "🔒 via DigiLocker" : ""}
                       onChange={(e) => onSet(f.key, e.target.value)}
                       title={readOnly ? "Verified by DigiLocker — not editable" : undefined}
                       className={`w-full rounded-lg border px-2 py-1.5 text-sm outline-none focus:border-emerald-500 ${
-                        readOnly
-                          ? "border-sky-300 bg-sky-50 font-medium text-slate-800"
-                          : locked
-                            ? "cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400"
-                            : "border-slate-300 bg-slate-50 text-slate-800"
+                        readOnly ? "border-sky-300 bg-sky-50 font-medium text-slate-800" : "border-slate-300 bg-slate-50 text-slate-800"
                       }`}
                     />
                   )}
