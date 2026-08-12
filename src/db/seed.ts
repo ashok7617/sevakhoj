@@ -77,6 +77,8 @@ const SCHEME_CATEGORIES = [
   ["children", "Children"],
   ["women", "Women"],
   ["students", "Students / Scholarships"],
+  ["farmers", "Farmers"],
+  ["workers", "Workers / Labour"],
   ["widows", "Widows"],
   ["senior_citizens", "Senior Citizens"],
   ["disability", "Persons with Disabilities"],

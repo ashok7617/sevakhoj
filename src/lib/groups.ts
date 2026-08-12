@@ -44,6 +44,20 @@ export const GROUPS: Group[] = [
     phase1: false,
   },
   {
+    slug: "farmers",
+    name: "Farmers",
+    blurb: "Farmer income-support, crop and agriculture welfare schemes.",
+    emoji: "🌾",
+    phase1: false,
+  },
+  {
+    slug: "workers",
+    name: "Workers / Labour",
+    blurb: "Construction & unorganised-worker welfare boards, pensions and benefits.",
+    emoji: "👷",
+    phase1: false,
+  },
+  {
     slug: "mental_health",
     name: "Mental Health",
     blurb: "Psychiatric care, rehabilitation homes, and halfway homes.",
