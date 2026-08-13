@@ -49,3 +49,7 @@ __pycache__/
 
 # keep example env templates tracked (real .env / .env.local stay ignored)
 !.env.example
+
+# myScheme crawl cache & staging (regenerated locally, not committed)
+scripts/myscheme/cache/
+scripts/myscheme/out/

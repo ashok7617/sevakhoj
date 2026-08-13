@@ -16,7 +16,9 @@
     "matrix:csv": "tsx scripts/export-matrix-csv.ts",
     "test:finder": "tsx scripts/test-care-finder.ts",
     "db:seed-starter": "tsx scripts/seed-starter-facilities.ts",
-    "db:seed-schemes": "tsx scripts/seed-schemes.ts"
+    "db:seed-schemes": "tsx scripts/seed-schemes.ts",
+    "myscheme:ingest": "node scripts/myscheme/ingest.mjs",
+    "myscheme:normalize": "node scripts/myscheme/normalize.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.116.0",
@@ -37,6 +39,7 @@
     "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.3.0",
+    "playwright": "^1.49.0",
     "tailwindcss": "^4",
     "tsx": "^4.23.11",
     "typescript": "^5"
