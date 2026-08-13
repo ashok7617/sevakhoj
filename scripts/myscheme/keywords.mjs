@@ -17,8 +17,10 @@ export const KEYWORDS = [
   { group: "widows", terms: ["widow pension", "vidhwa pension", "nirashrit mahila", "ekal nari", "women in distress", "destitute women pension"] },
   // Persons with disabilities
   { group: "disability", terms: ["disability pension", "divyang pension", "viklang pension", "handicapped pension", "disability certificate", "UDID", "differently abled assistance"] },
-  // Construction / unorganised workers
-  { group: "workers", terms: ["construction worker", "BOCW", "building and other construction workers", "labour card", "unorganised worker pension", "e-shram"] },
+  // Construction / unorganised workers. NB: keep terms SPECIFIC — broad ones
+  // like "e-shram" (matches e-content/e-tablet/e-bike) and "labour card"
+  // (matches ration/soil-health/credit *cards*) pulled in off-topic schemes.
+  { group: "workers", terms: ["construction worker pension", "BOCW", "building and other construction workers", "construction worker labour card", "silicosis pension"] },
   // Women & maternity
   { group: "women", terms: ["maternity benefit", "widow remarriage", "marriage assistance", "working women hostel", "single women"] },
 ];

@@ -19,6 +19,14 @@ const NORMALIZED = path.join(HERE, "out", "normalized.json");
 const SAMPLE_TS = path.join(ROOT, "src", "data", "sampleSchemes.ts");
 const OUT_TS = path.join(ROOT, "src", "data", "myschemeSchemes.ts");
 
+// Off-topic schemes the broad "workers" keywords ("e-shram", "labour card")
+// wrongly pulled in — students / farmers / food-security / health / transport,
+// outside SevaKhoj's care focus. Excluded from the catalogue (verified by hand).
+const DROP_SLUGS = new Set([
+  "bsccs", "dadoe", "doshc", "ersych", "e-yuvasbirace-yuvafugs", "kcc", "mgpy",
+  "nets", "e-nam", "nfssaayprcuk", "nfssphwrc", "sfyyrc", "sghs", "spebj", "tufs", "ucuk",
+]);
+
 const BENEFICIARY = {
   senior_citizens: "Senior citizens",
   widows: "Widows / single women",
@@ -65,7 +73,9 @@ async function main() {
   const normalized = JSON.parse(await readFile(NORMALIZED, "utf8"));
   const existing = await existingSchemes();
 
-  const good = normalized.filter((n) => n.benefits && n.eligibility && n.schemeName);
+  const good = normalized.filter(
+    (n) => n.benefits && n.eligibility && n.schemeName && !DROP_SLUGS.has(n.mySchemeSlug),
+  );
   const records = [];
   const skipped = [];
 
