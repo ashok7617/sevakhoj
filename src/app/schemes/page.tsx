@@ -44,6 +44,20 @@ export default async function SchemesPage({
         official source.
       </p>
 
+      <a
+        href="https://www.myscheme.gov.in/search"
+        target="_blank"
+        rel="noreferrer"
+        className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-xs text-sky-900 hover:bg-sky-100"
+      >
+        <span aria-hidden>🏛️</span>
+        <span>
+          SevaKhoj curates <b>care-related</b> schemes and adds <b>pre-filled applications</b>. For the
+          Government of India&apos;s full registry of <b>4,700+ schemes</b> and the official eligibility
+          finder, see <b className="underline">myScheme</b> (DIC · MeitY) ↗
+        </span>
+      </a>
+
       <form action="/schemes" method="get" className="mt-5 flex flex-wrap gap-2">
         <input
           type="search"
