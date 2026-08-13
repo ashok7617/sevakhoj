@@ -32,14 +32,17 @@ export type PensionConfig = {
   orgLocal: string; // dept name in local script (Devanagari)
   orgEn: string;
   deptLine: string; // small grey sub-line
-  incomeLimit: number; // annual family-income ceiling used for the advisory check
-  incomeNote: string; // human description of the ceiling
+  incomeLimit: number; // default annual family-income ceiling for the advisory check
+  incomeNote: string; // human description of the default ceiling
   residenceNote?: string; // e.g. "5+ years' residence in Delhi"
   oldAgeMin: number; // usually 60
+  oldAgeMinFemale?: number; // e.g. Rajasthan: women 55, men 58
   widowMin: number; // usually 18
   widowMax?: number | null; // Delhi has none; UP splits at 60 → old-age
   disabilityMax?: number | null;
-  schemes: Record<PensionKind, { local: string; en: string; amount: string }>;
+  // A scheme may override the income ceiling per pension type (e.g. Rajasthan:
+  // disability ₹60k, old-age/widow ₹48k). Falls back to the config-level ceiling.
+  schemes: Record<PensionKind, { local: string; en: string; amount: string; incomeLimit?: number; incomeNote?: string }>;
 };
 
 const KIND_LABEL: Record<PensionKind, string> = {
@@ -122,11 +125,13 @@ function assess(kind: PensionKind, m: Record<string, string>, cfg: PensionConfig
 
   const age = ageOf(m.dob || "");
   const income = toInt(m.income || "");
+  const incomeLimit = cfg.schemes[kind].incomeLimit ?? cfg.incomeLimit;
 
   if (kind === "old-age") {
+    const min = m.gender === "Female" && cfg.oldAgeMinFemale ? cfg.oldAgeMinFemale : cfg.oldAgeMin;
     if (age === null) missing = true;
-    else if (age < cfg.oldAgeMin) fails.push(`Age ${age} is below ${cfg.oldAgeMin} — this is an old-age pension.`);
-    else reasons.push(`Age ${age} ≥ ${cfg.oldAgeMin} ✓`);
+    else if (age < min) fails.push(`Age ${age} is below ${min} — this is an old-age pension.`);
+    else reasons.push(`Age ${age} ≥ ${min} ✓`);
   }
 
   if (kind === "widow") {
@@ -147,8 +152,8 @@ function assess(kind: PensionKind, m: Record<string, string>, cfg: PensionConfig
   }
 
   if (income === null) missing = true;
-  else if (income > cfg.incomeLimit) fails.push(`Family income ₹${income.toLocaleString("en-IN")} exceeds the ₹${cfg.incomeLimit.toLocaleString("en-IN")} ceiling.`);
-  else reasons.push(`Income within the ₹${cfg.incomeLimit.toLocaleString("en-IN")} ceiling ✓`);
+  else if (income > incomeLimit) fails.push(`Family income ₹${income.toLocaleString("en-IN")} exceeds the ₹${incomeLimit.toLocaleString("en-IN")} ceiling.`);
+  else reasons.push(`Income within the ₹${incomeLimit.toLocaleString("en-IN")} ceiling ✓`);
 
   if (fails.length) return { level: "no", reasons: fails };
   if (missing) return { level: "wait", reasons: ["Fill date of birth, income" + (kind === "disability" ? " and disability %" : "") + " to check eligibility."] };
@@ -322,7 +327,7 @@ export function PensionApply({
               <Row label="9. वार्षिक पारिवारिक आय ₹ / Annual family income" value={V("income")} />
               <Row label="आय प्रमाण-पत्र सं. / Income certificate" value={V("incomeCert")} />
             </div>
-            <div className="py-1 text-[10.5px] text-slate-600">पात्रता आय सीमा / Eligible income ceiling: {config.incomeNote}{config.residenceNote ? ` · ${config.residenceNote}` : ""}</div>
+            <div className="py-1 text-[10.5px] text-slate-600">पात्रता आय सीमा / Eligible income ceiling: {scheme.incomeNote ?? config.incomeNote}{config.residenceNote ? ` · ${config.residenceNote}` : ""}</div>
 
             {kind === "widow" ? (
               <>

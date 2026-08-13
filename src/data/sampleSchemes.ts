@@ -2134,6 +2134,23 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     verificationStatus: "government_verified",
   },
   {
+    id: "a5a5a5a5-0000-4000-8000-000000000001",
+    schemeName: "Mukhyamantri Vridhjan Samman Pension (Rajasthan Old Age)",
+    governmentLevel: "state",
+    state: "Rajasthan",
+    department: "Social Justice & Empowerment Department (RajSSP), Rajasthan",
+    beneficiaryCategory: "Senior citizens (women 55+, men 58+)",
+    schemeGroupSlug: "senior_citizens",
+    eligibility:
+      "Rajasthan residents — women aged 55+ and men aged 58+ — with annual family income up to ₹48,000, applying through the RajSSP portal.",
+    benefits:
+      "Age-slab old-age pension — around ₹1,000–₹1,500/month by age (revised upward in recent updates; confirm the current rate on the RajSSP portal), via DBT.",
+    documentsRequired: ["Age proof", "Income certificate", "Aadhaar", "Bank details"],
+    applicationUrl: "https://ssp.rajasthan.gov.in/",
+    officialSourceUrl: "https://ssp.rajasthan.gov.in/",
+    verificationStatus: "government_verified",
+  },
+  {
     id: "de000011-0000-4000-8000-000000000011",
     schemeName: "Ganga Swarupa Yojana (Gujarat Widow Pension)",
     governmentLevel: "state",

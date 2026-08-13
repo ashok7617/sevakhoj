@@ -25,6 +25,7 @@ export function applyPathForScheme(
   if (type && s.governmentLevel === "state" && /pension/i.test(s.schemeName)) {
     if (s.state === "Uttar Pradesh") return `/apply/up-pension?type=${type}`;
     if (s.state === "Delhi") return `/apply/dl-pension?type=${type}`;
+    if (s.state === "Rajasthan") return `/apply/rj-pension?type=${type}`;
   }
 
   return null;
