@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
   let n = 0;
   for (const [k, v] of Object.entries(raw)) {
     if (typeof v === "string" && v.trim() !== "" && n < 60) {
-      fields[k] = v.slice(0, 200);
+      fields[k] = v.slice(0, k === "photo" ? 400_000 : 200); // photo is a small JPEG data URL
       n++;
     }
   }

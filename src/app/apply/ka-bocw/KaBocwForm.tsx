@@ -6,6 +6,7 @@ import {
   type FieldCfg,
   ProfileBar,
   ProfileEditor,
+  PhotoField,
   PrintStyle,
   Row,
   Sec,
@@ -84,6 +85,7 @@ export function KaBocwForm({ profile, configured, signedIn, error }: { profile: 
             <span className="font-mono text-[0.62rem] uppercase tracking-widest text-emerald-700">Collected once</span>
             <h2 className="text-base font-semibold text-slate-900">Universal profile</h2>
           </div>
+          <PhotoField value={V("photo")} onChange={(v) => set("photo", v)} />
           <ProfileEditor fields={FIELDS} value={V} dlVerified={dlVerified} onSet={set} />
           <p className="mt-3 flex gap-1.5 text-xs text-slate-500"><span>ⓘ</span><span>Same saved profile as UP &amp; Maharashtra — Karnataka uses <b>Taluk</b>. Adding this state took one form component, one page, and one line in the apply-route map.</span></p>
         </div>
@@ -128,7 +130,14 @@ export function KaBocwForm({ profile, configured, signedIn, error }: { profile: 
                 </div>
                 <Row label="9. ಪಡಿತರ ಚೀಟಿ / Ration card" value={V("rationCard")} />
               </div>
-              <div className="grid h-[104px] w-[84px] place-items-center border border-slate-400 text-center text-[8.5px] text-slate-400">ಫೋಟೋ<br />Photo<br />{dlVerified ? "✓ eKYC" : "(attach)"}</div>
+              <div className="grid h-[104px] w-[84px] place-items-center overflow-hidden border border-slate-400 text-center text-[8.5px] text-slate-400">
+                {V("photo") ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={V("photo")} alt="applicant" className="h-full w-full object-cover" />
+                ) : (
+                  <span>ಫೋಟೋ<br />Photo<br />{dlVerified ? "✓ eKYC" : "(attach)"}</span>
+                )}
+              </div>
             </div>
 
             <Sec>ಆ · ಶಾಶ್ವತ ವಿಳಾಸ / Permanent address</Sec>

@@ -10,7 +10,7 @@
  * auto-fill is optional and only surfaces when partner creds are configured.
  */
 
-import { useState, type ReactNode } from "react";
+import { useState, type ChangeEvent, type ReactNode } from "react";
 
 export type Src = "dl" | "self" | "pd" | "otp";
 export type FieldCfg = {
@@ -60,6 +60,83 @@ export function eligibility(dob: string, daysStr: string): { level: "wait" | "ye
     return { level: "yes", text: `✓ Eligible — age ${age} (18–60) and ${days} days' work (≥90). Ready to e-sign & submit.` };
   const why = !ageOk ? `age must be 18–60 (now ${age ?? "?"})` : `needs ≥90 days' work (now ${isNaN(days) ? "?" : days})`;
   return { level: "no", text: `✕ Not eligible — ${why}.` };
+}
+
+/* --------------------------------------------------------------- photo field */
+
+/** Read any image file → auto-crop to a passport ratio → small JPEG data URL. */
+function fileToPassport(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error("read failed"));
+    reader.onload = () => {
+      const img = new Image();
+      img.onerror = () => reject(new Error("decode failed"));
+      img.onload = () => {
+        const TW = 220, TH = 264; // passport 5:6
+        const c = document.createElement("canvas");
+        c.width = TW;
+        c.height = TH;
+        const ctx = c.getContext("2d");
+        if (!ctx) return reject(new Error("no canvas"));
+        const scale = Math.max(TW / img.width, TH / img.height);
+        const w = img.width * scale;
+        const h = img.height * scale;
+        ctx.fillStyle = "#fff";
+        ctx.fillRect(0, 0, TW, TH);
+        ctx.drawImage(img, (TW - w) / 2, (TH - h) / 2, w, h);
+        resolve(c.toDataURL("image/jpeg", 0.72));
+      };
+      img.src = reader.result as string;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+export function PhotoField({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState(false);
+  async function pick(e: ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    setBusy(true);
+    setErr(false);
+    try {
+      onChange(await fileToPassport(file));
+    } catch {
+      setErr(true);
+    } finally {
+      setBusy(false);
+    }
+  }
+  return (
+    <div className="mb-4 flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-3 no-print">
+      <div className="grid h-[72px] w-[60px] flex-none place-items-center overflow-hidden rounded border border-slate-300 bg-slate-50 text-[9px] text-slate-400">
+        {value ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={value} alt="passport photo preview" className="h-full w-full object-cover" />
+        ) : (
+          "Photo"
+        )}
+      </div>
+      <div className="flex-1">
+        <div className="text-sm font-medium text-slate-800">Passport photo</div>
+        <div className="text-xs text-slate-500">
+          {err ? <span className="text-rose-600">Couldn&apos;t read that image — try a JPG/PNG.</span> : "Clear, front-facing. Auto-cropped & resized for the form."}
+        </div>
+      </div>
+      <label className="cursor-pointer rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100">
+        {busy ? "…" : value ? "Change" : "Upload"}
+        <input type="file" accept="image/*" onChange={pick} className="hidden" />
+      </label>
+      {value ? (
+        <button type="button" onClick={() => onChange("")} className="text-xs text-slate-400 hover:text-rose-700">
+          Remove
+        </button>
+      ) : null}
+    </div>
+  );
 }
 
 /* ------------------------------------------------------------- print helper */

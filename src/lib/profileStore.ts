@@ -35,7 +35,11 @@ export async function persistProfile(p: Profile): Promise<void> {
       .values({ userId: u.id, data: p, updatedAt: new Date() })
       .onConflictDoUpdate({ target: userProfiles.userId, set: { data: p, updatedAt: new Date() } });
   } else {
-    await saveCookie(p);
+    // The anon fallback is a ~4KB cookie; a photo data URL won't fit, so drop
+    // it. (Signed-in users keep the photo in their DB record above.)
+    const fields = { ...p.fields };
+    delete fields.photo;
+    await saveCookie({ ...p, fields });
   }
 }
 

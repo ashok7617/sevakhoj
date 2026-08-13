@@ -6,6 +6,7 @@ import {
   type FieldCfg,
   ProfileBar,
   ProfileEditor,
+  PhotoField,
   PrintStyle,
   Row,
   Sec,
@@ -88,6 +89,7 @@ export function UpBocwForm({ profile, configured, signedIn, error }: { profile: 
             <span className="font-mono text-[0.62rem] uppercase tracking-widest text-emerald-700">Collected once</span>
             <h2 className="text-base font-semibold text-slate-900">Universal profile</h2>
           </div>
+          <PhotoField value={V("photo")} onChange={(v) => set("photo", v)} />
           <ProfileEditor fields={FIELDS} value={V} dlVerified={dlVerified} onSet={set} />
           <p className="mt-3 flex gap-1.5 text-xs text-slate-500"><span>ⓘ</span><span>All fields are self-declared — enter them exactly as on your Aadhaar &amp; bank passbook. Hit <b>Save my details</b> and they carry to every other form.</span></p>
         </div>
@@ -132,7 +134,14 @@ export function UpBocwForm({ profile, configured, signedIn, error }: { profile: 
                 </div>
                 <Row label="9. राशन कार्ड / Ration card" value={V("rationCard")} />
               </div>
-              <div className="grid h-[104px] w-[84px] place-items-center border border-slate-400 text-center text-[8.5px] text-slate-400">फोटो<br />Photo<br />{dlVerified ? "✓ eKYC" : "(attach)"}</div>
+              <div className="grid h-[104px] w-[84px] place-items-center overflow-hidden border border-slate-400 text-center text-[8.5px] text-slate-400">
+                {V("photo") ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={V("photo")} alt="applicant" className="h-full w-full object-cover" />
+                ) : (
+                  <span>फोटो<br />Photo<br />{dlVerified ? "✓ eKYC" : "(attach)"}</span>
+                )}
+              </div>
             </div>
 
             <Sec>ख · स्थायी पता / Permanent address</Sec>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { PhotoField } from "@/components/bocwApply";
 
 type Field = { key: string; label: string; type?: "text" | "date" | "select"; opts?: string[]; wide?: boolean; hint?: string };
 
@@ -116,6 +117,7 @@ export function MyProfileForm({ initial, signedIn, email }: { initial: Record<st
       )}
 
       <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+        <PhotoField value={model.photo ?? ""} onChange={(v) => set("photo", v)} />
         {GROUPS.map((g) => (
           <div key={g.title} className="border-t border-slate-100 pt-4 first:border-t-0 first:pt-0 [&:not(:first-child)]:mt-4">
             <div className="mb-2 font-mono text-[0.62rem] uppercase tracking-widest text-slate-400">{g.title}</div>
