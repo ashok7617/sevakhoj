@@ -4,6 +4,7 @@
  * seeded as `needs_verification` — confirm against the official source before
  * treating any eligibility/benefit as final.
  */
+import { MYSCHEME_SCHEMES } from "./myschemeSchemes";
 export type SampleScheme = {
   id: string;
   schemeName: string;
@@ -33,7 +34,7 @@ export type SampleScheme = {
     | "needs_verification";
 };
 
-export const SAMPLE_SCHEMES: SampleScheme[] = [
+const CORE_SCHEMES: SampleScheme[] = [
   {
     id: "a1111111-1111-4111-8111-111111111111",
     schemeName: "Indira Gandhi National Old Age Pension Scheme (IGNOAPS)",
@@ -5043,3 +5044,10 @@ export const SAMPLE_SCHEMES: SampleScheme[] = [
     verificationStatus: "government_verified",
   },
 ];
+
+/**
+ * The full catalogue = hand-curated CORE schemes + the myScheme-derived set
+ * (Government of India · myscheme.gov.in, attributed via each entry's
+ * officialSourceUrl; see src/data/myschemeSchemes.ts and scripts/myscheme/).
+ */
+export const SAMPLE_SCHEMES: SampleScheme[] = [...CORE_SCHEMES, ...MYSCHEME_SCHEMES];
