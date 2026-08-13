@@ -312,3 +312,21 @@ export const verifications = pgTable(
   },
   (t) => [index("verifications_entity_idx").on(t.entityType, t.entityId)],
 );
+
+/* ------------------------------------------------- auth + saved user profile */
+
+export const appUsers = pgTable("app_users", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  email: varchar("email", { length: 320 }).notNull().unique(),
+  passwordHash: text("password_hash").notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+/** The saved universal profile (self-declared or DigiLocker), one per user. */
+export const userProfiles = pgTable("user_profiles", {
+  userId: uuid("user_id")
+    .primaryKey()
+    .references(() => appUsers.id, { onDelete: "cascade" }),
+  data: jsonb("data").notNull().default({}),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});

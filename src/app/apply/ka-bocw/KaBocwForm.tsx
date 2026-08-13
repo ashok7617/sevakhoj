@@ -59,7 +59,7 @@ const ERR: Record<string, string> = {
   access_denied: "You declined the DigiLocker consent.",
 };
 
-export function KaBocwForm({ profile, configured, error }: { profile: Profile | null; configured: boolean; connectedVia?: string; error?: string }) {
+export function KaBocwForm({ profile, configured, signedIn, error }: { profile: Profile | null; configured: boolean; signedIn: boolean; connectedVia?: string; error?: string }) {
   const dlVerified = Boolean(profile) && Object.values(profile?.source ?? {}).some((s) => /DigiLocker/i.test(s));
   const [model, setModel] = useState<Record<string, string>>(() => ({ ...SELF_DEFAULTS, state: "Karnataka", ...(profile?.fields ?? {}) }));
   const set = (k: string, v: string) => setModel((m) => ({ ...m, [k]: v }));
@@ -76,7 +76,7 @@ export function KaBocwForm({ profile, configured, error }: { profile: Profile | 
 
       {error && <div className="mt-4 rounded-lg border border-rose-200 bg-rose-50 px-4 py-2 text-sm text-rose-800">{ERR[error] ?? `Error: ${error}`}</div>}
 
-      <ProfileBar configured={configured} dlVerified={dlVerified} applyPath={APPLY_PATH} getFields={() => { const { state, ...rest } = model; return rest; }} />
+      <ProfileBar configured={configured} dlVerified={dlVerified} signedIn={signedIn} applyPath={APPLY_PATH} getFields={() => { const { state, ...rest } = model; return rest; }} />
 
       <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)]">
         <div className="no-print">

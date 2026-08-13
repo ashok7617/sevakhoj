@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { saveProfile, clearProfile } from "@/lib/digilocker-store";
+import { saveManualFields, clearProfile } from "@/lib/profileStore";
 
 export const dynamic = "force-dynamic";
 
@@ -17,17 +17,15 @@ export async function POST(req: NextRequest) {
   }
 
   const fields: Record<string, string> = {};
-  const source: Record<string, string> = {};
   let n = 0;
   for (const [k, v] of Object.entries(raw)) {
     if (typeof v === "string" && v.trim() !== "" && n < 60) {
       fields[k] = v.slice(0, 200);
-      source[k] = "self-entered";
       n++;
     }
   }
 
-  await saveProfile({ fields, source });
+  await saveManualFields(fields);
   return NextResponse.json({ ok: true, saved: n });
 }
 

@@ -92,11 +92,13 @@ async function postProfile(fields: Record<string, string>): Promise<boolean> {
 export function ProfileBar({
   configured,
   dlVerified,
+  signedIn,
   applyPath,
   getFields,
 }: {
   configured: boolean;
   dlVerified: boolean;
+  signedIn: boolean;
   applyPath: string;
   getFields: () => Record<string, string>;
 }) {
@@ -129,7 +131,9 @@ export function ProfileBar({
       <div className="grid h-9 w-9 flex-none place-items-center rounded-lg bg-slate-700 text-lg text-white">📝</div>
       <div className="min-w-[180px] flex-1">
         <div className="text-sm font-semibold text-slate-800">Enter your details once</div>
-        <div className="text-xs text-slate-600">Saved and reused across every scheme form — you won&apos;t re-type them.</div>
+        <div className="text-xs text-slate-600">
+          {signedIn ? "Saved to your account — reused across every scheme form." : "Saved on this device. Sign in to keep them on your account."}
+        </div>
       </div>
       <button
         onClick={save}
@@ -138,6 +142,9 @@ export function ProfileBar({
       >
         {st === "saving" ? "Saving…" : st === "saved" ? "Saved ✓" : st === "error" ? "Retry save" : "Save my details"}
       </button>
+      {!signedIn ? (
+        <a href="/account" className="text-xs font-medium text-emerald-700 hover:underline">Sign in</a>
+      ) : null}
       {configured ? (
         <a href={`/api/digilocker/connect?next=${encodeURIComponent(applyPath)}`} className="text-xs text-sky-700 hover:underline">
           or auto-fill via DigiLocker

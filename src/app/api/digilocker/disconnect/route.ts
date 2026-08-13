@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { safeApplyPath } from "@/lib/digilocker";
-import { clearProfile } from "@/lib/digilocker-store";
+import { clearProfile } from "@/lib/profileStore";
 
 export const dynamic = "force-dynamic";
 

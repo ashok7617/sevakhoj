@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { exchangeToken, fetchEkyc, listIssued, mapToProfile, safeApplyPath } from "@/lib/digilocker";
-import { takePkce, saveProfile } from "@/lib/digilocker-store";
+import { takePkce } from "@/lib/digilocker-store";
+import { persistProfile } from "@/lib/profileStore";
 
 export const dynamic = "force-dynamic";
 
@@ -23,7 +24,7 @@ export async function GET(req: NextRequest) {
     const token = await exchangeToken(code, taken.verifier);
     const ekyc = await fetchEkyc(token.access_token);
     const issued = await listIssued(token.access_token);
-    await saveProfile(mapToProfile(ekyc, issued));
+    await persistProfile(mapToProfile(ekyc, issued));
     return back("connected=1");
   } catch {
     return back("error=pull_failed");

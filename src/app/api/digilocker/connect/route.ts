@@ -8,7 +8,8 @@ import {
   mapToProfile,
   safeApplyPath,
 } from "@/lib/digilocker";
-import { savePkce, saveProfile } from "@/lib/digilocker-store";
+import { savePkce } from "@/lib/digilocker-store";
+import { persistProfile } from "@/lib/profileStore";
 
 export const dynamic = "force-dynamic";
 
@@ -30,6 +31,6 @@ export async function GET(req: NextRequest) {
   }
 
   const { ekyc, issued } = mockPull();
-  await saveProfile(mapToProfile(ekyc, issued));
+  await persistProfile(mapToProfile(ekyc, issued));
   return NextResponse.redirect(new URL(`${next}?connected=mock`, req.url));
 }
