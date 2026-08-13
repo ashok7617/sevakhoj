@@ -292,6 +292,63 @@ export function ProfileEditor({
   );
 }
 
+/* --------------------------------------------------- e-sign & submit guide */
+
+/**
+ * The government portals have no third-party submit / e-Sign API — the final
+ * Aadhaar-OTP submission legally happens ON the official portal. This panel
+ * turns "verify & submit on the portal" into concrete next steps + a link, so
+ * the applicant (or a CSC / e-Mitra operator) knows exactly what to do with
+ * the draft SevaKhoj generated.
+ */
+export function SubmitSteps({
+  portalName,
+  portalUrl,
+  applyLabel,
+  docs,
+  csc,
+}: {
+  portalName: string;
+  portalUrl: string;
+  applyLabel: string; // e.g. "labour-card registration" / "pension application"
+  docs: string; // documents to keep ready, human sentence
+  csc: string; // who can do it for you, e.g. "any CSC / Jan Seva Kendra"
+}) {
+  const steps = [
+    <>Hit <b>Print / Save PDF</b> above and keep your documents ready — {docs}.</>,
+    <>Open the official portal and <b>register / log in</b> with your Aadhaar-linked mobile (you&apos;ll get an OTP).</>,
+    <>Start a new {applyLabel} and <b>copy the details from this draft</b> — they&apos;re already in the portal&apos;s order. Upload your <b>passport photo</b> and the documents.</>,
+    <>Complete the <b>Aadhaar e-Sign / OTP</b> on the portal to submit — this is the legal signature; it can only be done there.</>,
+    <>Save the <b>application / registration number</b> and the acknowledgement receipt.</>,
+  ];
+  return (
+    <div className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50/60 p-4 no-print">
+      <div className="flex flex-wrap items-center gap-3">
+        <h3 className="text-sm font-semibold text-slate-900">Ready to e-sign &amp; submit</h3>
+        <a
+          href={portalUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="ml-auto rounded-lg bg-emerald-600 px-3 py-1.5 text-sm font-semibold text-white hover:bg-emerald-700"
+        >
+          Go to {portalName} →
+        </a>
+      </div>
+      <p className="mt-1 text-xs text-slate-600">
+        SevaKhoj can&apos;t submit for you — no government portal allows a third-party site to e-Sign or submit. It does the filling; you (or an operator) do the final OTP step on the portal.
+      </p>
+      <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-[13px] text-slate-700 marker:font-semibold marker:text-emerald-700">
+        {steps.map((s, i) => (
+          <li key={i}>{s}</li>
+        ))}
+      </ol>
+      <p className="mt-3 rounded-lg bg-white/70 px-3 py-2 text-xs text-slate-600">
+        No smartphone, or unsure? Take this printout to {csc} — they can complete the online submission and e-Sign for you, usually for a small fixed fee.
+      </p>
+    </div>
+  );
+}
+
 /* ---------------------------------------------------------- paper primitives */
 
 export function Row({ label, value }: { label: string; value: string }) {
