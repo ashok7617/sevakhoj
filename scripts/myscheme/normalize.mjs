@@ -33,9 +33,10 @@ function splitDocs(blob) {
   if (!blob) return [];
   const parts = blob
     .replace(/^Documents\s*Required/i, "")
+    .replace(/^\s*List of (the )?required documents/i, "")
     .split(/\s*\n?\s*\d+[.)]\s*|\n+|•|;/)
-    .map((s) => s.replace(/\s+/g, " ").trim())
-    .filter((s) => s.length > 2 && !/^documents?\s*required$/i.test(s));
+    .map((s) => s.replace(/\s+/g, " ").replace(/\.$/, "").trim())
+    .filter((s) => s.length > 2 && !/^(documents?\s*required|list of (the )?required documents?)$/i.test(s));
   return [...new Set(parts)].slice(0, 20);
 }
 

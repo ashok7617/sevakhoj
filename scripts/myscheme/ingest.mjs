@@ -44,11 +44,16 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 /** Type a keyword into myScheme search and collect unique scheme slugs. */
 async function collectSlugs(page, keyword) {
   await page.goto(`${ORIGIN}/search`, { waitUntil: "domcontentloaded" });
-  const input = page.locator('input[placeholder="Search"], input[type="text"]').first();
+  // The search box is a react-select whose bare <input type=text> is hidden;
+  // the visible field is the only one carrying placeholder="Search".
+  const input = page.locator('input[placeholder="Search"]:visible').first();
   await input.waitFor({ timeout: 15000 });
+  await input.click();
   await input.fill(keyword);
   await input.press("Enter");
-  await sleep(2000);
+  const searchBtn = page.getByRole("button", { name: /^search$/i }).first();
+  if (await searchBtn.count()) await searchBtn.click().catch(() => {});
+  await sleep(2500);
 
   let prev = -1;
   for (let i = 0; i < SCROLL_ROUNDS; i++) {
@@ -76,28 +81,30 @@ async function extractScheme(page, slug) {
         .replace(/[ \t]+\n/g, "\n")
         .replace(/\n{3,}/g, "\n\n")
         .trim();
+    // Each anchor div (id=details|benefits|…) wraps ONLY its own section, so
+    // read the element's own innerText directly.
     const sectionText = (id) => {
       const el = document.getElementById(id);
-      if (!el) return "";
-      const container = el.closest("section") || el.parentElement || el;
-      return clean(container.innerText || "");
+      return el ? clean(el.innerText || "") : "";
     };
-    const stripHead = (t, label) => clean(t.replace(new RegExp("^\\s*" + label, "i"), ""));
+    // Strip the leading heading label(s), which myScheme often repeats
+    // ("BenefitsBenefits Monthly pension …").
+    const stripHead = (t, label) => clean(t.replace(new RegExp("^\\s*(?:(?:" + label + ")\\s*)+", "i"), ""));
 
     const main = document.querySelector("main");
     const title = main ? [...main.querySelectorAll("h1")].map((h) => h.textContent.trim()).filter(Boolean)[0] || "" : "";
 
-    // The ministry / state line and tag chips sit between the title and the tabs.
-    const detailsRaw = sectionText("details");
+    const eligibility = stripHead(sectionText("eligibility"), "Eligibility");
+    const exclusions = stripHead(sectionText("exclusions"), "Exclusions");
 
     return {
       title,
-      details: stripHead(detailsRaw, "Details"),
+      details: stripHead(sectionText("details"), "Details|Features"),
       benefits: stripHead(sectionText("benefits"), "Benefits"),
-      eligibility: stripHead(sectionText("eligibility"), "Eligibility"),
+      eligibility: exclusions ? `${eligibility}\nExclusions: ${exclusions}` : eligibility,
       applicationProcess: stripHead(sectionText("application-process"), "Application Process"),
-      documentsRequired: stripHead(sectionText("documents-required"), "Documents Required"),
-      sources: stripHead(sectionText("sources"), "Sources(\\s*And References)?"),
+      documentsRequired: stripHead(sectionText("documents-required"), "Documents Required|List of the required documents"),
+      sources: stripHead(sectionText("sources"), "Sources(?:\\s*And References)?"),
     };
   });
 
