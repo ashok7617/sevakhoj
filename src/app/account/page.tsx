@@ -36,7 +36,8 @@ export default async function Page() {
             : "No details saved yet. Start an application and hit “Save my details”."}
         </p>
         <div className="mt-3 flex flex-wrap gap-3 text-sm">
-          <Link href="/apply/up-bocw" className="font-medium text-emerald-700 hover:underline">Start an application →</Link>
+          <Link href="/account/profile" className="font-medium text-emerald-700 hover:underline">Edit my profile →</Link>
+          <Link href="/apply/up-bocw" className="text-slate-500 hover:underline">Start an application</Link>
           <Link href="/schemes" className="text-slate-500 hover:underline">Browse schemes</Link>
         </div>
       </div>
