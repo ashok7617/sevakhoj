@@ -55,6 +55,12 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link
+            href="/account"
+            className="rounded-md px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+          >
+            Account
+          </Link>
+          <Link
             href="/care-centers"
             className="ml-1 rounded-md bg-emerald-600 px-3 py-2 font-medium text-white hover:bg-emerald-700"
           >
