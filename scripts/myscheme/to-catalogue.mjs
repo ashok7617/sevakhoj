@@ -65,6 +65,14 @@ function deptFromDetails(details) {
   return m ? m[1].trim() : undefined;
 }
 
+// Slugs confirmed to still match the live myScheme page (scripts/myscheme/
+// reverify.mjs) → promoted to government_verified. Everything else stays
+// needs_verification.
+let VERIFIED_SLUGS = new Set();
+try {
+  VERIFIED_SLUGS = new Set(JSON.parse(await readFile(path.join(HERE, "verified.json"), "utf8")));
+} catch {}
+
 async function existingSchemes() {
   const src = await readFile(SAMPLE_TS, "utf8");
   const names = [...src.matchAll(/schemeName:\s*"([^"]+)"/g)].map((m) => m[1]);
@@ -114,7 +122,7 @@ async function main() {
       applicationUrl: n._hint_applicationUrl || n.sourceUrl,
       officialSourceUrl: n.sourceUrl,
       sourceKey: "myscheme",
-      verificationStatus: "needs_verification",
+      verificationStatus: VERIFIED_SLUGS.has(n.mySchemeSlug) ? "government_verified" : "needs_verification",
     };
     records.push(rec);
   }

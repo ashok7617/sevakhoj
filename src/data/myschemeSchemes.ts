@@ -27,7 +27,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/apsdap",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/apsdap",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "773eeb64-3a18-4bcf-8e0a-fc5e76e180b5",
@@ -48,7 +48,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/csdsuk",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/csdsuk",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "ace869e0-d78e-41a9-8a21-344c5cf7efbc",
@@ -69,7 +69,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ddaps",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ddaps",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "06470fb1-38f4-455a-88c7-bf874f6f37c4",
@@ -102,7 +102,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://serviceonline.gov.in/",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/daanbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "d6563639-461b-464c-8ee5-2dc0172ac552",
@@ -132,7 +132,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/dpbbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/dpbbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "3fcbbdcc-fd82-41ff-809a-7e355ee1a47d",
@@ -153,7 +153,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/dp-gbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/dp-gbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "a66ff36e-cf65-4760-8da3-0b2bbf356410",
@@ -188,7 +188,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://megbocwwb.gov.in/bocw_services/login.htm",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/dpmbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "f9c9237b-aef0-4761-879e-1339b984b82b",
@@ -213,7 +213,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://esamajkalyan.gujarat.gov.in/",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/dmadls",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "7d691724-e728-41f5-8935-f29a8fe89937",
@@ -232,7 +232,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/dpyup",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/dpyup",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "3651938a-7d94-478f-8501-41b93e2c7f9c",
@@ -250,7 +250,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/eapfdap",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/eapfdap",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "e5be6c95-b3d2-48ac-899a-8bc51d3719d0",
@@ -269,7 +269,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/faotndodap",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/faotndodap",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "604e39c6-cabf-424f-8dc0-89e66db6ed0c",
@@ -292,7 +292,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/fat75opd",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/fat75opd",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "8d017b5b-9efc-4330-837b-da31a5ad70bc",
@@ -315,7 +315,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/gssvhhi",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/gssvhhi",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "14068696-3f0e-4f8e-8b8a-b502fcc3df11",
@@ -338,7 +338,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://cmscholarship.goa.gov.in/fcontactus.aspx",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/gsphs",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "43a11aae-081d-4243-8559-ee3a581c09fc",
@@ -360,7 +360,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/gstecs",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/gstecs",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "9b752e56-ee2e-4730-8d50-89ed3b9c3ed4",
@@ -381,7 +381,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/hssm",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/hssm",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "80447bb1-fc7b-498d-8e20-9d32210833d3",
@@ -401,7 +401,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ignsap",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ignsap",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "30888a8e-7619-4d49-867b-89e26f8d1a79",
@@ -427,7 +427,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/isssppcp",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/isssppcp",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "7e564192-9ce0-493c-8abd-8eba1aa45da8",
@@ -447,7 +447,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/matdapmdap",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/matdapmdap",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "a641f2cf-3e9f-413e-8ddc-e3baf7a522a0",
@@ -475,7 +475,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/madawp-ii",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/madawp-ii",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "903733e6-0d07-46a1-8849-dc23c67b69eb",
@@ -496,7 +496,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/pmmc",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/pmmc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "dbe3811a-f902-4bb1-8590-9896307ccdaf",
@@ -518,7 +518,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/slafpwd",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/slafpwd",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "ec6a7b6e-818c-4e59-89d1-88f936509855",
@@ -541,7 +541,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://ikhedut.gujarat.gov.in/iKhedutPublicScheme/Public/frm_Public_ANH2_SchemeApplicaiton.aspx",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/sspftdp",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "21b93419-a0dc-451a-84a8-ebb227045e74",
@@ -565,7 +565,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/sse40rbudp",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/sse40rbudp",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "28ee3e88-df7b-48fb-853e-80b926e8fc62",
@@ -593,7 +593,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/sspmphmrp",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/sspmphmrp",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "c7f176a8-b6a5-48a0-8d2f-ee56c7537591",
@@ -610,7 +610,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/udid",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/udid",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "840b7376-e41a-4c6c-822f-02f605e770ef",
@@ -645,7 +645,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/avyay-napsc-hssc",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/avyay-napsc-hssc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "a66e6e42-1a6d-4938-8b2b-0d4b07fdf941",
@@ -671,7 +671,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/dwps",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/dwps",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "f8ea417d-7538-419d-8b44-fb4ebd513cb7",
@@ -698,7 +698,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ddwps",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ddwps",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "33e3cca9-c9eb-4e9a-8e8d-26b88c7c3ad8",
@@ -723,7 +723,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/daps",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/daps",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "8ca36ffc-32b4-4117-8003-71f2df4b7708",
@@ -745,7 +745,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/dphpbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/dphpbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "bc4c722f-7408-42b8-85c2-5061c91fdac7",
@@ -768,7 +768,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/fdbcsc",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/fdbcsc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "8612058c-141b-4314-8a4b-db60cbd7aa28",
@@ -790,7 +790,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/gaoah",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/gaoah",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "6d5cadaf-7d9c-4f4a-8c22-d3718627c223",
@@ -806,7 +806,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/senior-fellowship",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/senior-fellowship",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "810303b9-5f37-43d2-887e-8b2048c9d9ff",
@@ -825,7 +825,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ioap",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ioap",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "94e37588-edb5-4198-8b73-c8ca3928e885",
@@ -845,7 +845,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ioap-u",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ioap-u",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "2e7c836c-bcec-4fec-8ee6-fe2154034359",
@@ -878,7 +878,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/jsps",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/jsps",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "9b49bc4c-5984-445b-8b3a-ee323ff942a0",
@@ -903,7 +903,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/mspadsc",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mspadsc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "d621b7d9-2d83-427a-8dc6-d44bacf39aed",
@@ -924,7 +924,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/mkaps",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mkaps",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "9c6b3d4a-0e7a-4290-849f-e21c93aff415",
@@ -948,7 +948,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/mvpy-bihar",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mvpy-bihar",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "94e5b345-25ad-4612-8f6c-d7dcb91016f6",
@@ -974,7 +974,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/npy-jbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/npy-jbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "2a57eeb2-8bc6-46ab-8b3a-5f75461a7872",
@@ -999,7 +999,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://ssp.uk.gov.in",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/oap",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "127faa36-f9cb-4f10-8ada-52e081d5a335",
@@ -1019,7 +1019,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/oapsapbandocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/oapsapbandocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "4d049677-a05a-429d-8eb5-bfe82637983e",
@@ -1040,7 +1040,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/olahwucf",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/olahwucf",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "59ed0b9f-69ce-4e30-8546-d988ca57e6bc",
@@ -1063,7 +1063,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/pbwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/pbwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "ce1b1966-84d5-46ef-8817-67f18c39d4b5",
@@ -1087,7 +1087,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/psoap",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/psoap",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "76219231-2e6e-4a5b-86af-21b66dfad5ca",
@@ -1107,7 +1107,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/disabled-pension",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/disabled-pension",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "18e05113-3c4d-45c8-839b-f70f1db44259",
@@ -1128,7 +1128,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://apdascac.ap.gov.in",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/sasss",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "6c214700-41ca-4d3e-82d0-03a389feb0ec",
@@ -1148,7 +1148,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/sstsc",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/sstsc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "2e6fc1ca-a693-4d0f-8271-0259a669c85e",
@@ -1167,7 +1167,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/scss",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/scss",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "a4350064-b57b-4e1f-8f30-e189af4b0b86",
@@ -1186,7 +1186,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ssch",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ssch",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "02ce9233-b4f3-4e1d-87fd-3434b994f0a8",
@@ -1205,7 +1205,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/upoaps",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/upoaps",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "d60fea60-d98e-47d3-8042-35f2c6cb3150",
@@ -1230,7 +1230,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/vspgsc",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/vspgsc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "6a4f1fc9-b213-4aee-869c-159381978539",
@@ -1260,7 +1260,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://pmmodiyojana.in/wp-content/uploads/2020/01/Application-Form-Rural.pdf",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/atwsfww",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "0e9030d0-6c5f-4381-8e1b-92eefd0ec6dd",
@@ -1285,7 +1285,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/msssgc",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/msssgc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "8e2e52f7-7161-40b6-867d-3fbf34e24000",
@@ -1305,7 +1305,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/dccbfww",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/dccbfww",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "74a72f4c-047d-4f12-8c41-1b5c29c7ed4a",
@@ -1330,7 +1330,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://shikshaportal.mp.gov.in/",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/edssgc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "b4220f6e-effa-49e8-8e57-1e5203e33d7f",
@@ -1353,7 +1353,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://cdn.s3waas.gov.in/s39b70e8fe62e40c570a322f1b0b659098/uploads/2018/08/2018083084.pdf",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/famapbandocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "9fd4f0ff-0b75-4856-8e88-b56856c2eaed",
@@ -1374,7 +1374,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/fam-gbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/fam-gbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "2c289a0d-3d21-416d-86a9-cc17bfc462d7",
@@ -1395,7 +1395,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/famtw",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/famtw",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "63450424-2523-4384-817b-3068a9b7d197",
@@ -1431,7 +1431,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ghfwwgs",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ghfwwgs",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "9e773def-255a-4ee1-8861-5729f7dda907",
@@ -1450,7 +1450,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/gwwh",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/gwwh",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "33e66734-cb22-42b4-8681-90fb7c77f0d7",
@@ -1471,7 +1471,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ilshrwcd",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ilshrwcd",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "472c2fef-a979-4223-8c1f-49a9cab25a97",
@@ -1495,7 +1495,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ihs",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ihs",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "086b1a91-63c8-4748-8b7e-f6ab122ac533",
@@ -1519,7 +1519,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/matn",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/matn",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "3113c233-778c-4f4e-88b7-0bca287bd666",
@@ -1549,7 +1549,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://abocwwb.assam.gov.in/",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/maabocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "939644d2-6963-4d73-883c-8f868ed31510",
@@ -1582,7 +1582,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/majkbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/majkbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "f7f64758-0024-453b-8a1c-0ba748f7096a",
@@ -1610,7 +1610,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/maobocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/maobocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "e5152ee9-1a0a-4979-80f3-5e7d015e60e9",
@@ -1639,7 +1639,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://labour.mp.gov.in/.",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/masmpbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "cae2c0d4-647a-41fd-84aa-f86213316a6f",
@@ -1672,7 +1672,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://megbocwwb.gov.in/bocw_services/login.htm",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mbmbocwwb-meghalaya",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "c090ad97-d3b0-4915-8686-f727baad7545",
@@ -1695,7 +1695,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/mbwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mbwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "687e35f5-397e-420c-8423-4f3162e2f32a",
@@ -1725,7 +1725,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://abocwwb.assam.gov.in/",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mbabocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "86a5c941-f0f5-4656-8a6c-18eb65edddcd",
@@ -1758,7 +1758,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://megbocwwb.gov.in/bocw_services/login.htm",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mbmbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "936c2e93-3097-4879-8e1a-f13459d3bf2a",
@@ -1785,7 +1785,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/mbobocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mbobocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "5618fd19-4741-447b-8033-9dc91ebe5a34",
@@ -1807,7 +1807,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/mbfwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mbfwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "91f8fb4c-c5b4-4761-8b79-a61a86171549",
@@ -1832,7 +1832,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/mbs-t",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mbs-t",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "125687c4-f4c1-471a-864e-a857e930dd02",
@@ -1860,7 +1860,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/mbs-hbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/mbs-hbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "dff3e1d4-d93c-4b02-818d-0307f770f35c",
@@ -1879,7 +1879,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/snwwh",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/snwwh",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "d4dc5dc0-3073-4bf0-8e08-d9b52267aa0a",
@@ -1899,7 +1899,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://frg.ugc.ac.in/",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/sjpfsgc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "65fbcbb6-1b16-478f-8e36-557080be26ba",
@@ -1985,7 +1985,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/wdenp",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/wdenp",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "80d84db7-e3a4-441b-8e26-879375830287",
@@ -2012,7 +2012,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/dprw-hbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/dprw-hbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "a416fe3b-2204-4c15-86e4-b8d170459272",
@@ -2038,7 +2038,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/erky",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/erky",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "a2cb2d5d-28a5-437a-8493-cefe7289c58f",
@@ -2059,7 +2059,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/etsy",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/etsy",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "33f1c104-ddd8-4e4c-8b4d-8757b35682bc",
@@ -2087,7 +2087,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/haryana-building-and-other-construction-workers-welfare-board",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/haryana-building-and-other-construction-workers-welfare-board",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "f7e21cee-e2d5-4c45-8f9f-7a161acf326d",
@@ -2119,7 +2119,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://abocwwb.assam.gov.in/",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/gpabocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "abc8d9d2-21b2-4057-824a-8e91f0236ea5",
@@ -2145,7 +2145,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/lcrlc",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/lcrlc",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "c16542aa-4b61-460a-88a3-d46bc9d41895",
@@ -2167,7 +2167,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/pb-gbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/pb-gbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "e49e041c-4638-4d45-88fc-770dad3b6c78",
@@ -2193,7 +2193,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/pbftcw",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/pbftcw",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "5647c7f6-7acf-4580-850a-a3a4b310528d",
@@ -2229,7 +2229,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/pshbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/pshbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "b218bd88-86e2-4673-8643-f35cf73db431",
@@ -2262,7 +2262,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/srp-hsb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/srp-hsb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "61a83160-ff4b-4661-8021-eeffbe37d662",
@@ -2281,7 +2281,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/vssay",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/vssay",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "3aa18e62-e951-49bf-882c-b4d7ae32a855",
@@ -2307,7 +2307,7 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/vps",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/vps",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   },
   {
     "id": "e41bc328-a89e-4a68-8c15-8fdac5ebd2d4",
@@ -2336,6 +2336,6 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "applicationUrl": "https://www.myscheme.gov.in/schemes/wphbocwwb",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/wphbocwwb",
     "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
+    "verificationStatus": "government_verified"
   }
 ];
