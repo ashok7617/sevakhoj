@@ -478,26 +478,6 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "verificationStatus": "needs_verification"
   },
   {
-    "id": "23cd9f47-0afd-4258-86f5-bc1f8027659e",
-    "schemeName": "Procedure for Making \"Orphan Certificate\" for Getting Horizontal Reservation for Orphan Children",
-    "governmentLevel": "state",
-    "state": "Uttarakhand",
-    "department": "Women Welfare Department",
-    "beneficiaryCategory": "Persons with disabilities",
-    "schemeGroupSlug": "disability",
-    "eligibility": "The beneficiary must be a permanent resident of Uttarakhand.\nChildren whose both biological or adoptive parents have died within 21 years from the child’s birth are eligible for reservation.\nOrphan children residing in voluntary or government-run homes within the state are also eligible for reservation.",
-    "benefits": "Through this certificate, a 5% horizontal reservation is provided in Government/Non-Government services to eligible beneficiaries.",
-    "documentsRequired": [
-      "Aadhaar card of the orphan child",
-      "Permanent residence certificate",
-      "Death certificates of both parents"
-    ],
-    "applicationUrl": "https://www.myscheme.gov.in/schemes/pmochro",
-    "officialSourceUrl": "https://www.myscheme.gov.in/schemes/pmochro",
-    "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
-  },
-  {
     "id": "903733e6-0d07-46a1-8849-dc23c67b69eb",
     "schemeName": "Procedure for Making Medical Certificate (for Certifying Disability)",
     "governmentLevel": "state",
@@ -1473,29 +1453,6 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     "verificationStatus": "needs_verification"
   },
   {
-    "id": "0a0dc7ae-39f4-4dfd-8ade-6f3c426f584e",
-    "schemeName": "Hostel Facility Scheme (HPBOCWWB)",
-    "governmentLevel": "state",
-    "state": "Himachal Pradesh",
-    "beneficiaryCategory": "Women & children",
-    "schemeGroupSlug": "women",
-    "eligibility": "For Registration as a Building/ Construction Worker:\nThe applicant should be a resident of Himachal Pradesh\nThe applicant should be a Building/ Construction Worker..\nThe applicant should be aged between 18 and 60 years.\nThe worker should have completed at least 90 days of building and other construction work in the last 12 months.\nThe registration of the applicant should have been renewed annually.\nEligibility Criteria for Scheme:\nThe parent of the child must be engaged in building or construction work under the Himachal Pradesh Building and Other Construction Workers Welfare Board (HPBOCWWB).\nThe parent of the child should be registered with the Himachal Pradesh Building and Other Construction Workers Welfare Board (HPBOCWWB).\nThe parent's membership with the Himachal Pradesh Welfare Board must be active at the time of application.",
-    "benefits": "Provides ₹15,000–₹20,000 annually for hostel stay, boarding, and food for beneficiaries' children.",
-    "documentsRequired": [
-      "Identity Card of the Member",
-      "Bank Account Details (e.g., Copy of Bank Passbook)",
-      "Labour Card",
-      "Identity proof of student/child",
-      "Receipt of Hostel Expenditure",
-      "Age Certificate",
-      "Any other documents as required"
-    ],
-    "applicationUrl": "https://www.myscheme.gov.in/schemes/hfshpbocwwb",
-    "officialSourceUrl": "https://www.myscheme.gov.in/schemes/hfshpbocwwb",
-    "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
-  },
-  {
     "id": "33e66734-cb22-42b4-8681-90fb7c77f0d7",
     "schemeName": "Individual loaning scheme: Haryana Women Development Corporation",
     "governmentLevel": "state",
@@ -1537,27 +1494,6 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     ],
     "applicationUrl": "https://www.myscheme.gov.in/schemes/ihs",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/ihs",
-    "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
-  },
-  {
-    "id": "79edee09-ca97-4635-8966-dc88883f28a5",
-    "schemeName": "Jan-Nayak Karpoori Thakur Kalyan Hostel Scheme",
-    "governmentLevel": "state",
-    "state": "Bihar",
-    "beneficiaryCategory": "Women & children",
-    "schemeGroupSlug": "women",
-    "eligibility": "The applicant should be a permanent resident of Bihar.\nThe applicant should be studying in the current session in an educational institution nearest to the hostel.\nThe applicant should belong to the Extremely Backward Class (EBC).\nThe applicant should be studying in Class 10+2 or higher.",
-    "benefits": "9 kg rice and 6 kg wheat per student per month.\n₹1000/- monthly grant under the Chief Minister’s Hostel Grant Scheme.",
-    "documentsRequired": [
-      "Caste Certificate",
-      "Marksheet of the Previous Examination",
-      "Admission Certificate from the Educational Institution",
-      "Copy of Bank Account Details",
-      "Copy of Aadhaar Card"
-    ],
-    "applicationUrl": "https://www.myscheme.gov.in/schemes/jnktkhs",
-    "officialSourceUrl": "https://www.myscheme.gov.in/schemes/jnktkhs",
     "sourceKey": "myscheme",
     "verificationStatus": "needs_verification"
   },
@@ -2048,24 +1984,6 @@ export const MYSCHEME_SCHEMES: SampleScheme[] = [
     ],
     "applicationUrl": "https://www.myscheme.gov.in/schemes/wdenp",
     "officialSourceUrl": "https://www.myscheme.gov.in/schemes/wdenp",
-    "sourceKey": "myscheme",
-    "verificationStatus": "needs_verification"
-  },
-  {
-    "id": "17bd98d9-f691-415d-8aa3-921187311584",
-    "schemeName": "Youth Hostel Scheme",
-    "governmentLevel": "central",
-    "beneficiaryCategory": "Women & children",
-    "schemeGroupSlug": "women",
-    "eligibility": "There is no age restriction but if applicant is below 18 then he/she  must be accompanied by a parent or guardian when staying in a youth hostel.",
-    "benefits": "Affordable accommodation: Youth hostels offer a much cheaper alternative to hotels and guesthouses.\nSocial atmosphere: Youth hostels are a great place to meet new people from all over the world.\nCultural experience: Youth hostels are often located in places of cultural interest, giving you the opportunity to learn about the local culture and traditions.\nFlexible options: Youth hostels offer a variety of accommodation options, including dormitories, private rooms, and family rooms. You can also choose to book meals at the hostel or cook your own food.",
-    "documentsRequired": [
-      "Completed YHAI membership application form",
-      "Passport size photograph",
-      "Proof of identity, such as a copy of your passport, driver's license, or Aadhaar card"
-    ],
-    "applicationUrl": "https://www.myscheme.gov.in/schemes/yhs",
-    "officialSourceUrl": "https://www.myscheme.gov.in/schemes/yhs",
     "sourceKey": "myscheme",
     "verificationStatus": "needs_verification"
   },

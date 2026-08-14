@@ -21,6 +21,7 @@ export const KEYWORDS = [
   // like "e-shram" (matches e-content/e-tablet/e-bike) and "labour card"
   // (matches ration/soil-health/credit *cards*) pulled in off-topic schemes.
   { group: "workers", terms: ["construction worker pension", "BOCW", "building and other construction workers", "construction worker labour card", "silicosis pension"] },
-  // Women & maternity
-  { group: "women", terms: ["maternity benefit", "widow remarriage", "marriage assistance", "working women hostel", "single women"] },
+  // Women & maternity. NB: "working women hostel" was dropped — it matched
+  // generic Youth/Karpoori/BOCW hostels, not women's welfare.
+  { group: "women", terms: ["maternity benefit", "widow remarriage", "women marriage assistance", "single woman pension", "destitute women"] },
 ];

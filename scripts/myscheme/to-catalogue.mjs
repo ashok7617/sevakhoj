@@ -23,8 +23,12 @@ const OUT_TS = path.join(ROOT, "src", "data", "myschemeSchemes.ts");
 // wrongly pulled in — students / farmers / food-security / health / transport,
 // outside SevaKhoj's care focus. Excluded from the catalogue (verified by hand).
 const DROP_SLUGS = new Set([
+  // workers vertical (broad "e-shram" / "labour card" keywords)
   "bsccs", "dadoe", "doshc", "ersych", "e-yuvasbirace-yuvafugs", "kcc", "mgpy",
   "nets", "e-nam", "nfssaayprcuk", "nfssphwrc", "sfyyrc", "sghs", "spebj", "tufs", "ucuk",
+  // women/disability verticals ("working women hostel" caught generic hostels;
+  // an orphan-reservation cert landed under disability) — verified off-topic on myScheme
+  "yhs", "jnktkhs", "hfshpbocwwb", "pmochro",
 ]);
 
 const BENEFICIARY = {
