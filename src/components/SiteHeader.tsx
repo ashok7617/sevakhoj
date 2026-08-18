@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MobileNav, type NavLink } from "./MobileNav";
 
 const NAV = [
   { href: "/finder", label: "AI Care Finder" },
@@ -11,9 +12,16 @@ const NAV = [
   // ordinary visitors are never shown a login prompt.
 ];
 
+// The mobile dropdown carries the same links plus Account and the Find Help CTA.
+const MOBILE_LINKS: NavLink[] = [
+  ...NAV,
+  { href: "/account", label: "Account" },
+  { href: "/care-centers", label: "Find Help", cta: true },
+];
+
 export function SiteHeader() {
   return (
-    <header className="border-b border-slate-200 bg-white">
+    <header className="relative border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2">
           <svg viewBox="0 0 512 512" className="h-9 w-9" role="img" aria-label="SevaKhoj logo">
@@ -44,7 +52,7 @@ export function SiteHeader() {
             </span>
           </span>
         </Link>
-        <nav className="flex items-center gap-1 text-sm">
+        <nav className="hidden items-center gap-1 text-sm md:flex">
           {NAV.map((n) => (
             <Link
               key={n.href}
@@ -67,6 +75,8 @@ export function SiteHeader() {
             Find Help
           </Link>
         </nav>
+
+        <MobileNav links={MOBILE_LINKS} />
       </div>
     </header>
   );
